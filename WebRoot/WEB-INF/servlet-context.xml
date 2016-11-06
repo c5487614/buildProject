@@ -16,8 +16,7 @@
     http://www.springframework.org/schema/tx/spring-tx.xsd 
     ">
     <context:annotation-config />
-	<context:component-scan base-package="cn.org.hbca.lca.controller" />
-	<context:component-scan base-package="cn.org.hbca.lca.signcert.service.imp" />
+	<context:component-scan base-package="protect.build.controller" />
 	<mvc:annotation-driven>
 		<mvc:message-converters>
 			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
