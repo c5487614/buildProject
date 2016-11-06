@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+           http://www.springframework.org/schema/beans/spring-beans.xsd 
+           http://www.springframework.org/schema/context  
+			http://www.springframework.org/schema/context/spring-context.xsd
+           http://cxf.apache.org/jaxws 
+           http://cxf.apache.org/schemas/jaxws.xsd 
+           ">
+	
+	<context:annotation-config />
+	<context:component-scan base-package=".." />
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"  destroy-method="close">  
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />  
+		<property name="url" value="jdbc:mysql://localhost:3306/hbcalca?useUnicode=true&amp;characterEncoding=UTF8" />  
+		<property name="username" value="root" />  
+		<property name="password" value="CCH" />
+    </bean> 
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="typeAliasesPackage" value="cn.org.hbca.lca.model" />
+	</bean>
+
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+  		<property name="basePackage" value="cn.org.hbca.lca.dao" />
+	</bean>
+	
+	<!--  
+	<bean id="lcaApplyMapper" class="cn.org.hbca.lca.dao.LcaApplyMapper"></bean>
+	<bean id="lcaFileDataMapper" class="cn.org.hbca.lca.dao.LcaFileDataMapper"></bean>
+	-->
+	<bean id="lcaApplyService" class="cn.org.hbca.lca.service.imp.LcaApplyService">
+		<property name="lcaApplyMapper"> 
+        	<ref bean="lcaApplyMapper"/> 
+        </property>
+	</bean>
+	<bean id="lcaFileDataService" class="cn.org.hbca.lca.service.imp.LcaFileDataService">
+		<property name="lcaFileDataMapper"> 
+        	<ref bean="lcaFileDataMapper"/> 
+        </property>
+	</bean>
+	
+	
+</beans>
