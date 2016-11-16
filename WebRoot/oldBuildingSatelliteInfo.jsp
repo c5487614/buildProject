@@ -7,110 +7,40 @@
 <title>古建筑保护系统</title>  
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/index.css" rel="stylesheet" />
-<link rel="stylesheet" href="css/jquery.fileupload.css">
-<link rel="stylesheet" href="css/jquery.fileupload-ui.css">
-
 <script type="text/javascript" src="jquery/jquery.min.js"></script>
-<script src="javascripts/fileUpload/vendor/jquery.ui.widget.js"></script>
-<script src="javascripts/fileUpload/jquery.iframe-transport.js"></script>
-<script src="javascripts/fileUpload/jquery.fileupload.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-<script type="text/javascript">
+<script type="text/javascript" src="index.js"></script>
+
+<script type="text/javascript"> 
 $(document).ready(function(){
 	$('.menu_class').each(function(index,el){
 		$(this).removeClass('active');
 	});
-	$('#menu_manageAddInfo').addClass('active');
+	$('#menu_satallite').addClass('active');
 });
-function infoTypeClick(obj){
-	//console.log();
-	var text = $(obj).html()
-	$(obj).parent().parent().children().each(function(){
-		$(this).removeClass('active');
-	});
-	$(obj).parent().addClass('active');
-	if('图片'==text){
-		$('#textInfo').css('display','none');
-		$('#imageInfo').css('display','block');
-		$('#voiceInfo').css('display','none');
-	}else if('文字'==text){
-		$('#textInfo').css('display','block');
-		$('#imageInfo').css('display','none');
-		$('#voiceInfo').css('display','none');
-	}else if('音频'==text){
-		$('#textInfo').css('display','none');
-		$('#imageInfo').css('display','none');
-		$('#voiceInfo').css('display','block');
-	}
-}
 </script>
 <body>
 <jsp:include page="nav_bar.jsp" />
-
+    
 <div class="container-fluid">
+
   
   <div class="row-fluid">
     <div class="span2 well" id="menu">
       <!--Sidebar content-->
       <jsp:include page="nav_menu.jsp" />
     </div>
-    <div class="span10 well">
-    
-      	<form class="form-horizontal">
-		  <div class="control-group">
-		    <label class="control-label" for="inputEmail">保护对象：</label>
-		    <div class="controls">
-		      <input type="text" id="inputEmail" placeholder="">
-		    </div>
-		  </div>
-		  <div class="control-group">
-		    <label class="control-label" for="inputPassword">天气情况</label>
-		    <div class="controls">
-		      <input type="text" id="inputEmail" placeholder="">
-		    </div>
-		  </div>
-		  <div class="control-group">
-		    <label class="control-label" for="inputPassword">温度</label>
-		    <div class="controls">
-		      <input type="text" id="inputEmail" placeholder="">
-		    </div>
-		  </div>
-		  <div class="control-group">
-		    <label class="control-label" for="inputPassword">操作员</label>
-		    <div class="controls">
-		      <input type="text" id="inputEmail" placeholder="">
-		    </div>
-		  </div>
-		  <div class="control-group">
-		    <label class="control-label" for="inputPassword">时间</label>
-		    <div class="controls">
-		      <input type="text" id="inputEmail" placeholder="">
-		    </div>
-		  </div>
-		  <div>
-			  <ul class="nav nav-tabs">
-			  	<li class="active"><a href="javascript:void(0);" onclick="infoTypeClick(this);">文字</a></li>
-			  	<li class=""><a href="javascript:void(0);" onclick="infoTypeClick(this);">图片</a></li>
-			  	<li class=""><a href="javascript:void(0);" onclick="infoTypeClick(this);">音频</a></li>
-			  	<li class=""><a href="javascript:void(0);" onclick="infoTypeClick(this);">视频</a></li>
-			  </ul>
-		  </div>
-		  <div id="textInfo">
-			  <div class="control-group">
-			    <label class="control-label" for="inputEmail">实时信息：</label>
-			    <div class="controls">
-			      <textarea id="inputEmail" placeholder="" ></textarea>
-			    </div>
-			  </div>
-		  </div>
-		  <div id="imageInfo" style="display:none">
-			  <div class="control-group">
-			    <label class="control-label" for="inputEmail">实时信息：</label>
-			    <div class="controls">
-			      <textarea id="inputEmail" placeholder="" ></textarea>
-			    </div>
-			  </div>
-			  <div>
+    <div class="span10 well" id="buildingInfo">
+      <h3 class="text-center">遗址一卫星地图展示</h3>
+		<dl>
+		<dt>遗址一卫星地图说明</dt>
+		<dd>龙象塔是在广西首府南宁的邕江江畔，远处连绵青山上的一处宝塔。看到它不由得联想起杭州西湖上矗立的雷峰塔，以及钱塘江畔的六和塔。塔，中国人传奇故事中不可或缺的神秘元素之一，至今在中国人的心里，眼里都是一处神秘的禁地。又名青山塔，是青秀山的标志。位于青秀山之巅，
+始建于明代万历年间，为时任吏部左侍郎的南宁籍进士肖云举所建。取佛经“水行龙力大，陆行象力大”之意，故命名为“龙象塔”。海拔204米，高十多丈，八角九层，重檐砖结构。</dd>
+		</dl>
+		<dl>
+		<dt>遗址一卫星地图展示</dt>
+		<dd>
+			<div>
 			  	<ul class="thumbnails">
 		            <li class="span4">
 		              <a href="#" class="thumbnail">
@@ -139,30 +69,10 @@ function infoTypeClick(obj){
 		            </li>
           		</ul>
 			  </div>
-		  </div>
-		  
-		  <div id="voiceInfo" style="display:none">
-			  <div class="control-group">
-			    <label class="control-label" for="inputEmail">音频信息：</label>
-			    <div class="controls fileupload-buttonbar">
-			    <span class="btn btn-success fileinput-button">
-                    <i class="glyphicon glyphicon-plus"></i>
-                    <span>Add files...</span>
-                    <input type="file" name="files[]" multiple />
-                </span>
-			      
-			    </div>
-			  </div>
-		  </div>
-		  <div class="control-group">
-		    <div class="controls">
-		      <button type="submit" class="btn">提交</button>
-		    </div>
-		  </div>
-		</form>
+		</dd>
+		</dl>
     </div>
   </div>
 </div>
-
 </body>  
 </html>
