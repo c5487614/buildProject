@@ -27,86 +27,12 @@
 
 <script type="text/javascript">
 
-function initDatepicker(controlId){
-	$(controlId).datetimepicker({
-		autoclose: true,
-		format: 'yyyy-mm-dd',
-        pickDate: true,
-        pickTime: false,
-        startView: 2,
-		minView: 2,
-		language: 'zh-CN'
-	});
-}
 
 $(document).ready(function(){
-	initDatepicker('#reportDate');
 	$('.menu_class').each(function(index,el){
 		$(this).removeClass('active');
 	});
-	$('#menu_manageAddInfo').addClass('active');
-	/*
-	var uploader = new plupload.Uploader({
-		runtimes : 'html5,flash,silverlight,html4',
-		browse_button : 'uploadButton1', // you can pass an id...
-		container: document.getElementById('test'), // ... or DOM Element itself
-		url : 'upload.php',
-		flash_swf_url : '<%=request.getContextPath()%>/javascripts/plupload-2.2.1/js/Moxie.swf',
-		silverlight_xap_url : '<%=request.getContextPath()%>/javascripts/plupload-2.2.1/js/Moxie.xap',
-		
-		filters : {
-			max_file_size : '10mb',
-			mime_types: [
-				{title : "Image files", extensions : "jpg,gif,png"},
-				{title : "Zip files", extensions : "zip"}
-			]
-		},
-	
-		init: {
-			PostInit: function() {
-				document.getElementById('test').innerHTML = '';
-	
-				document.getElementById('testBtn').onclick = function() {
-					uploader.start();
-					return false;
-				};
-			},
-	
-			FilesAdded: function(up, files) {
-				plupload.each(files, function(file) {
-					document.getElementById('filelist').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b></div>';
-				});
-			},
-	
-			UploadProgress: function(up, file) {
-				document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = '<span>' + file.percent + "%</span>";
-			},
-	
-			Error: function(up, err) {
-				document.getElementById('console').appendChild(document.createTextNode("\nError #" + err.code + ": " + err.message));
-			}
-		}
-	});
-
-	uploader.init();
-	*/
-	toastr.options = {
-		"closeButton": false,
-		"debug": false,
-		"newestOnTop": false,
-		"progressBar": false,
-		"positionClass": "toast-top-center",
-		"preventDuplicates": false,
-		"onclick": null,
-		"showDuration": "300",
-		"hideDuration": "500",
-		"timeOut": "1000",
-		"extendedTimeOut": "300",
-		"showEasing": "swing",
-		"hideEasing": "linear",
-		"showMethod": "fadeIn",
-		"hideMethod": "fadeOut"
-	};
+	$('#menu_monitor').addClass('active');
 	
 });
 function infoTypeClick(obj){
@@ -138,35 +64,13 @@ function infoTypeClick(obj){
 		$('#videoInfo').css('display','block');
 	}
 }
-function submitForm(){
-	$.ajax({
-		method : 'POST',
-		url : '<%=request.getContextPath()%>/info/addInfo.do',
-		data : $('#dataForm').serialize(),
-		success : function(){
-			toastr["success"]('保存成功!');
-		},
-		error : function(){
-			toastr["error"]('保存失败!');
-		}
-	});
-	return false;
-}
-function test(){
-	$('#file_upload1').click();
-}
-function setLevel(text){
-	$('#warning').val(text);
-}
-function setWeather(text){
-	$('#weather').val(text);
-}
+
 </script>
 <body>
 <jsp:include page="nav_bar.jsp" />
 <jsp:useBean id="now" class="java.util.Date" />
-<jsp:useBean id="user" type="protect.build.model.User" scope="request"></jsp:useBean>
-<jsp:useBean id="building" type="protect.build.model.OldBuilding" scope="request"></jsp:useBean>
+
+<jsp:useBean id="info" type="protect.build.model.Info" scope="request"></jsp:useBean>
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-2 well" style="margin-left:30px;margin-right:30px" id="menu">
@@ -180,68 +84,48 @@ function setWeather(text){
       		<input type="hidden" name="buildId" class="form-control" value="1" />
       		<input type="hidden" name="userId" class="form-control" value="1" />
 			  <div class="form-group">
-			    <label class="col-sm-2 control-label" for="inputEmail3">保护对象：</label>
+			    <p class="col-sm-2 text-right">保护对象：</p>
 			    <div class="col-sm-5">
-			      <input type="text" class="form-control" value="<jsp:getProperty property="name" name="building" />" id="buildName" name="buildName" placeholder="Email">
+			      <jsp:getProperty property="buildName" name="info" />
 			    </div>
 			  </div>
 			  <div class="form-group">
-			    <label class="col-sm-2 control-label" for="inputEmail3">天气情况：</label>
-			    <div class="col-sm-3">
-			      <input type="text" class="form-control" value="晴天" id="weather" name="weather" placeholder="">
-			    </div>
-			    <div class="col-sm-2">
-			      <div class="btn-group btn-group-xs">
-					  <button type="button" class="btn btn-default btn-success" onclick="setWeather('晴天')">晴天</button>
-					  <button type="button" class="btn btn-default btn-success" onclick="setWeather('多云')">多云</button>
-					  <button type="button" class="btn btn-default btn-success" onclick="setWeather('阴天')">阴天</button>
-					  <button type="button" class="btn btn-default btn-success" onclick="setWeather('下雨')">下雨</button>
-					  <button type="button" class="btn btn-default btn-success" onclick="setWeather('下雪')">下雪</button>
-					</div>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label class="col-sm-2 control-label" for="temprature">温度：</label>
+			    <p class="col-sm-2 text-right">天气情况：</p>
 			    <div class="col-sm-5">
-			      <input type="text" class="form-control" value="2-12" id="temprature" name="temprature" placeholder="Email">
+			      <jsp:getProperty property="weather" name="info" />
 			    </div>
 			  </div>
 			  <div class="form-group">
-			    <label class="col-sm-2 control-label" for="inputEmail3">预警：</label>
-			    <div class="col-sm-3">
-			      <input type="text" class="form-control" value="正常" id="warning" name="warning" placeholder="Email">
-			    </div>
-			    <div class="col-sm-2">
-			      <div class="btn-group">
-					  <button type="button" class="btn btn-default btn-success" onclick="setLevel('正常')">正常</button>
-					  <button type="button" class="btn btn-default btn-warning" onclick="setLevel('警告')">警告</button>
-					  <button type="button" class="btn btn-default btn-danger" onclick="setLevel('危险')">危险</button>
-					</div>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label class="col-sm-2 control-label" for="inputEmail3">操作员：</label>
+			    <p class="col-sm-2 text-right">温度：</p>
 			    <div class="col-sm-5">
-			      <input type="text" class="form-control" value="<jsp:getProperty property="userName" name="user" />" id="contactor" name="contactor" placeholder="Email">
+			      <jsp:getProperty property="temprature" name="info" />
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <p class="col-sm-2 text-right">预警：</p>
+			    <div class="col-sm-5">
+			      <jsp:getProperty property="level" name="info" />
+			    </div> 
+			  </div>
+			  <div class="form-group">
+			    <p class="col-sm-2 text-right">操作员：</p>
+			    <div class="col-sm-5">
+			      <jsp:getProperty property="userName" name="info" />
 			    </div>
 			  </div>
 			  
 			  <div class="form-group">
-			    <label class="col-sm-2 control-label" for="inputEmail3">时间：</label>
+			    <p class="col-sm-2 text-right">时间：</p>
 			    <div class="col-sm-5">
-			      <div class="input-group date form_date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="reportDate" data-link-format="yyyy-mm-dd">
-                    <input name="reportDate" id="reportDate" class="form-control" type="text" 
-                    value="<fmt:formatDate pattern="yyyy-MM-dd" value="${now}"/>"/>
-					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                  </div>
+			      <p class=""><fmt:formatDate pattern="yyyy-MM-dd" value="${info.createDate}"/></p>
 			    </div>
 			  </div>
 		  <div>
 			  <ul class="nav nav-tabs">
 			  	<li class="active"><a href="javascript:void(0);" onclick="infoTypeClick(this);">文字</a></li>
-			  	<li class=""><a href="javascript:void(0);" onclick="infoTypeClick(this);">图片</a></li>
-			  	<li class=""><a href="javascript:void(0);" onclick="infoTypeClick(this);">音频</a></li>
-			  	<li class=""><a href="javascript:void(0);" onclick="infoTypeClick(this);">视频</a></li>
+			  	<li class="" style="display:none"><a href="javascript:void(0);" onclick="infoTypeClick(this);">图片</a></li>
+			  	<li class="" style="display:none"><a href="javascript:void(0);" onclick="infoTypeClick(this);">音频</a></li>
+			  	<li class="" style="display:none"><a href="javascript:void(0);" onclick="infoTypeClick(this);">视频</a></li>
 			  </ul>
 		  </div>
 		  <div id="textInfo" style="margin-top:20px">
@@ -364,17 +248,6 @@ function setWeather(text){
 			    </div>
 			  </div>
 		  </div>
-		  
-		  <div>
-		  
-		  	<div class="form-group">
-			    <label class="col-sm-2 control-label" for="inputEmail3"></label>
-			    <div class="col-sm-5">
-			      <button type="button" class="btn" onclick="submitForm();">提交</button>
-			    </div>
-			</div>
-		  </div>
-		  
 		</form>
 		
     </div>

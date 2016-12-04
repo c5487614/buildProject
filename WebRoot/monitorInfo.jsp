@@ -36,12 +36,60 @@ function initDatepicker(controlId){
 }
 
 $(document).ready(function(){
-	initDatepicker('#tbox_planDevDate');
 	$('.menu_class').each(function(index,el){
 		$(this).removeClass('active');
 	});
 	$('#menu_monitor').addClass('active');
-	//setInterval("",1000);
+	setInterval(function(){
+		$.ajax({
+			method : 'POST',
+			url : '<%=request.getContextPath()%>/info/getMonitorData.do',
+			success : function(data, textStatus, jqXHR){
+				/**/
+				$('#monitorTableTBody').empty();
+				var html = '<tr>'+
+					'<th>建筑名称</th>'+
+					'<th>所在地区</th>'+
+					'<th>保护等级</th>'+
+					'<th>更新时间</th>'+
+					'<th>气温情况</th>'+
+					'<th>负责人</th>'+
+					'<th>联系方式</th>'+
+					'<th>操作</th>'+
+					'</tr>';
+				
+				for(var i=0;i<data.length;i++){
+					var item = data[i];
+					var tr = '';
+					if(item.level=='警告'){
+						tr = '<tr class="warning">';
+					}else if(item.level=='危险'){
+						tr = '<tr class="danger">';
+					}else{
+						tr = '<tr class="success">';
+					}
+					html = html + tr +
+					'<td>'+item.name+'</td>'+
+					'<td>'+item.district+'</td>'+
+					'<td>'+item.protectLevel+'</td>'+
+					'<td>'+item.updateDate+'</td>'+
+					'<td>'+item.temprature+'</td>'+
+					'<td>'+item.contactor+'</td>'+
+					'<td>'+item.phone+'</td>'+
+					'<td><a href="<%=request.getContextPath()%>/info/viewInfoPage.do?infoId='+item.infoId+'">查看详情</a></td>'+
+					'</tr>';
+					//console.log(item);
+				}
+				$('#monitorTableTBody').empty();
+				$('#monitorTableTBody').append(html);
+
+				
+			},
+			error : function(){
+				toastr["error"]('保存失败!');
+			}
+		})
+	},1000);
 });
 
 </script>
@@ -57,9 +105,9 @@ $(document).ready(function(){
     </div>
     
     <div class="col-md-9 well">
-		<table class="table table-bordered table-hover table-striped">
+		<table id="monitorTable" class="table table-bordered table-hover table-striped">
 			<caption>实时监控列表</caption>
-			<tbody>
+			<tbody id="monitorTableTBody">
 			<tr>
 				<th>建筑名称</th>
 				<th>所在地区</th>
@@ -71,7 +119,20 @@ $(document).ready(function(){
 				<th>操作</th>
 			</tr>
 			<c:forEach var="model" items="${listMonitor}">
-				<tr>
+				<c:choose>
+					<c:when test="${model.level == null}">
+						<tr class="success">
+					</c:when>
+					<c:when test="${model.level eq '警告'}">
+						<tr class="warning">
+					</c:when>
+					<c:when test="${model.level eq '危险'}">
+						<tr class="danger">
+					</c:when>
+					<c:otherwise>
+						<tr class="success">
+					</c:otherwise>
+				</c:choose>
 					<td><c:out value="${model.name}"/></td>
 					<td><c:out value="${model.district}"/></td>
 					<td><c:out value="${model.protectLevel}"/></td>
@@ -82,47 +143,6 @@ $(document).ready(function(){
 					<td>查看详情</td>
 				</tr>
 			</c:forEach>
-			
-			<tr>
-				<td>建筑一</td>
-				<td>南宁</td>
-				<td>3级</td>
-				<td>2016-11-11 18:50:20</td>
-				<td>2-20度</td>
-				<td>负责人1</td>
-				<td>13925841254</td>
-				<td>查看详情</td>
-			</tr>
-			<tr>
-				<td>建筑一</td>
-				<td>南宁</td>
-				<td>3级</td>
-				<td>2016-11-11 18:50:20</td>
-				<td>2-20度</td>
-				<td>负责人1</td>
-				<td>13925841254</td>
-				<td>查看详情</td>
-			</tr>
-			<tr>
-				<td>建筑一</td>
-				<td>南宁</td>
-				<td>3级</td>
-				<td>2016-11-11 18:50:20</td>
-				<td>2-20度</td>
-				<td>负责人1</td>
-				<td>13925841254</td>
-				<td>查看详情</td>
-			</tr>
-			<tr>
-				<td>建筑一</td>
-				<td>南宁</td>
-				<td>3级</td>
-				<td>2016-11-11 18:50:20</td>
-				<td>2-20度</td>
-				<td>负责人1</td>
-				<td>13925841254</td>
-				<td>查看详情</td>
-			</tr>
 			</tbody>
 		</table>
     </div>

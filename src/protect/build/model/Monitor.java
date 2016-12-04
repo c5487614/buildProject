@@ -50,6 +50,19 @@ public class Monitor {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	public String getLevel() {
+		return level;
+	}
+	public void setLevel(String level) {
+		this.level = level;
+	}
+	public String getInfoId() {
+		return infoId;
+	}
+	public void setInfoId(String infoId) {
+		this.infoId = infoId;
+	}
+	private String infoId;
 	private String name;
 	private String district;
 	private String protectLevel;
@@ -57,5 +70,6 @@ public class Monitor {
 	private String temprature;
 	private String contactor;
 	private String phone;
+	private String level;
 	
 }
