@@ -17,7 +17,7 @@
 <script type="text/javascript"> 
 $(document).ready(function(){
 	var map = new BMap.Map("baidu_map");
-	map.centerAndZoom("南宁", 12);
+	map.centerAndZoom("南宁", 9);
 	map.enableScrollWheelZoom(true);
 	
 	$.ajax({
@@ -66,7 +66,7 @@ $(document).ready(function(){
 			//alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
 		});
     });
-    */ 
+     */
 });
 </script>
 <body>

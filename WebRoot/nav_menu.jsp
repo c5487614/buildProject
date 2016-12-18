@@ -12,9 +12,10 @@
   	遗址地形地貌展示
   	<b class="caret"></b></a>
 	  <ul class="dropdown-menu "  role="menu" aria-labelledby="dropdownMenu">
-		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showInfoPage.do">遗址一</a></li>
-		  <li><a tabindex="-1" href="#">遗址二</a></li>
-		  <li><a tabindex="-1" href="#">遗址三</a></li>
+		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=1">龙象塔</a></li>
+		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=2">真武阁</a></li>
+		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=3">归龙斜塔</a></li>
+		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=4">杨美古镇</a></li>
 		  <li class="divider"></li>
 	  </ul>
   </li>
@@ -23,9 +24,10 @@
   	古建筑空间信息展示
   	<b class="caret"></b></a>
 	  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showGISInfoPage.do">遗址一</a></li>
-		  <li><a tabindex="-1" href="#">遗址二</a></li>
-		  <li><a tabindex="-1" href="#">遗址三</a></li>
+		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showGISInfoPage.do?buildId=1">龙象塔</a></li>
+		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showGISInfoPage.do?buildId=2">真武阁</a></li>
+		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showGISInfoPage.do?buildId=3">归龙斜塔</a></li>
+		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showGISInfoPage.do?buildId=4">杨美古镇</a></li>
 		  <li class="divider"></li>
 	  </ul>
   </li>
@@ -34,9 +36,10 @@
   	卫星定位地图展示
   	<b class="caret"></b></a>
 	  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showSatelliteInfoPage.do">遗址一</a></li>
-		  <li><a tabindex="-1" href="#">遗址二</a></li>
-		  <li><a tabindex="-1" href="#">遗址三</a></li>
+		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showSatelliteInfoPage.do?buildId=1">龙象塔</a></li>
+		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showSatelliteInfoPage.do?buildId=2">真武阁</a></li>
+		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showSatelliteInfoPage.do?buildId=3">归龙斜塔</a></li>
+		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showSatelliteInfoPage.do?buildId=4">杨美古镇</a></li>
 		  <li class="divider"></li>
 	  </ul>
   </li>

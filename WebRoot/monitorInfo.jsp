@@ -12,15 +12,13 @@
 <link href="<%=request.getContextPath()%>/css/jquery.fileupload.css" rel="stylesheet">
 <link href="<%=request.getContextPath()%>/css/jquery.fileupload-ui.css" rel="stylesheet">
 <link href="<%=request.getContextPath()%>/javascripts/bootstrap_datepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+<link href="<%=request.getContextPath()%>/javascripts/toast/toastr.min.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="<%=request.getContextPath()%>/jquery/jquery.min.js"></script>
-<script src="<%=request.getContextPath()%>/javascripts/fileUpload/vendor/jquery.ui.widget.js"></script>
-<script src="<%=request.getContextPath()%>/javascripts/fileUpload/jquery.iframe-transport.js"></script>
-<script src="<%=request.getContextPath()%>/javascripts/fileUpload/jquery.fileupload.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/bootstrap/js/bootstrap.js"></script>
 <script src="<%=request.getContextPath()%>/javascripts/bootstrap_datepicker/bootstrap-datetimepicker.min.js"></script>
 <script src="<%=request.getContextPath()%>/javascripts/bootstrap_datepicker/bootstrap-datetimepicker.zh-CN.js"></script>
-
+<script src="<%=request.getContextPath()%>/javascripts/toast/toastr.min.js" ></script>
 <script type="text/javascript">
 
 function initDatepicker(controlId){
@@ -40,12 +38,32 @@ $(document).ready(function(){
 		$(this).removeClass('active');
 	});
 	$('#menu_monitor').addClass('active');
+	toastr.options = {
+		"closeButton": false,
+		"debug": false,
+		"newestOnTop": false,
+		"progressBar": false,
+		"positionClass": "toast-top-center",
+		"preventDuplicates": false,
+		"onclick": null,
+		"showDuration": "500",
+		"hideDuration": "500",
+		"timeOut": "800",
+		"extendedTimeOut": "300",
+		"showEasing": "swing",
+		"hideEasing": "linear",
+		"showMethod": "fadeIn",
+		"hideMethod": "fadeOut"
+	};
+	
 	setInterval(function(){
 		$.ajax({
 			method : 'POST',
 			url : '<%=request.getContextPath()%>/info/getMonitorData.do',
 			success : function(data, textStatus, jqXHR){
 				/**/
+				var toastList = new Array();
+				var j = 0;
 				$('#monitorTableTBody').empty();
 				var html = '<tr>'+
 					'<th>建筑名称</th>'+
@@ -61,10 +79,17 @@ $(document).ready(function(){
 				for(var i=0;i<data.length;i++){
 					var item = data[i];
 					var tr = '';
+					var toastMsg = {};
 					if(item.level=='警告'){
 						tr = '<tr class="warning">';
+						toastMsg.level = 'warning';
+						toastMsg.msg = '请注意，建筑[' + item.name + ']的情况';
+						toastList[j++] = toastMsg;
 					}else if(item.level=='危险'){
 						tr = '<tr class="danger">';
+						toastMsg.level = 'danger';
+						toastMsg.msg = '请注意，建筑[' + item.name + ']的情况';
+						toastList[j++] = toastMsg;
 					}else{
 						tr = '<tr class="success">';
 					}
@@ -82,14 +107,24 @@ $(document).ready(function(){
 				}
 				$('#monitorTableTBody').empty();
 				$('#monitorTableTBody').append(html);
-
+				//console.log(toastList);
+				//console.log(toastList.length);
+				/**/
+				for(var i=0;i<toastList.length;i++){
+					var model = toastList[i];
+					if(model.level=='danger'){
+						toastr["error"](model.msg);
+					}else if(model.level=='warning'){
+						toastr["info"](model.msg);
+					}
+				}
 				
 			},
 			error : function(){
 				toastr["error"]('保存失败!');
 			}
 		})
-	},1000);
+	},2000);
 });
 
 </script>

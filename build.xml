@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="hbcaDRS" basedir="." default="war_uat">
+	<target name="init">
+		<mkdir dir="build/classes"/>
+		<mkdir dir="dist"/>
+	</target>
+	<path id="compile.classpath"> 
+		<fileset dir="WebContent/WEB-INF/lib"> 
+	    </fileset> 
+	</path>
+	<target name="compile" depends="init" > 
+	    <javac target="1.6" destdir="WebRoot/WEB-INF/classes" debug="false" srcdir="src"> 
+	        <classpath refid="compile.classpath"/> 
+	    </javac> 
+	</target>
+	<target name="compress">
+		<copy todir="dist/WebRoot">
+		    <fileset dir="WebRoot">
+		      <exclude name=".svn/*.*"/>
+		      <exclude name="**/*.java"/>
+		      <exclude name="**/applicationContext.xml" />
+		    </fileset>
+		</copy>
+		<concat destfile="dist/WebRoot/javascripts/all-in-one.js">
+			<filelist dir="dist/WebRoot/javascripts" files="main.js" />
+			<fileset dir="dist/WebRoot/javascripts"
+				includes="user/*.js,dailyReport/*.js,project/*.js,projectItem/*.js,reports/*.js"
+				/>
+		</concat>
+		<java jar="E:\resources\yuicompressor-2.4.8.jar" fork="true" >
+			<arg line="--type js --charset UTF-8 --nomunge 
+				dist/WebRoot/javascripts/all-in-one.js
+				-o dist/WebRoot/javascripts/main1.js" />
+		</java>
+	</target>
+	<target name="war_dev" depends="compile">
+		<copy todir="dist/WebRoot">
+		    <fileset dir="WebRoot">
+		      <exclude name=".svn/*.*"/>
+		      <exclude name="**/applicationContext.xml" />
+		    </fileset>
+		</copy>
+		<!--
+		<copy overwrite="true" file="config/dev/common.js" tofile="dist/WebRoot/javascripts/common.js"/>
+		-->
+		
+	    <war destfile="dist/hbcaDRS.war" webxml="dist/WebRoot/WEB-INF/web.xml"> 
+	        <fileset dir="dist/WebRoot">
+	        	<exclude name="**/servlet-api.jar" />
+	    	</fileset>
+	    </war> 
+	</target> 
+	<target name="war_uat" depends="compile,compress">
+		<copy todir="dist/WebRoot">
+		    <fileset dir="WebRoot">
+		      <exclude name=".svn/*.*"/>
+		      <exclude name="**/applicationContext.xml" />
+		    </fileset>
+		</copy>
+		<copy overwrite="true" file="config/prod/index.jsp" tofile="dist/WebRoot/index.jsp"/>
+	    <war destfile="dist/hbcaDRS.war" webxml="dist/WebRoot/WEB-INF/web.xml"> 
+	        <fileset dir="dist/WebRoot">
+	        	<exclude name="**/servlet-api.jar" />
+	    	</fileset>
+	    </war> 
+	</target> 
+	<target name="war_prod" depends="compile">
+		<copy todir="dist/WebRoot">
+		    <fileset dir="WebRoot">
+		      <exclude name=".svn/*.*"/>
+		      <exclude name="**/applicationContext.xml" />
+		    </fileset>
+		</copy>
+		<copy overwrite="true" file="config/prod/spring-context.xml" tofile="dist/WebRoot/WEB-INF/spring-context.xml"/>
+	    <war destfile="dist/DigtalProtect.war" webxml="dist/WebRoot/WEB-INF/web.xml"> 
+	        <fileset dir="dist/WebRoot">
+	        	<exclude name="**/servlet-api.jar" />
+	    	</fileset>
+	    </war> 
+	</target>
+	
+	<target name="classescopy">
+		<copy todir="dist/ROOT/WEB-INF">
+		    <fileset dir="WebRoot/WEB-INF">
+		      <exclude name=".svn/*.*"/>
+		    </fileset>
+		</copy>
+	</target>
+	<target name="clean"> 
+	    <delete dir="dist" /> 
+	    <delete dir="build" /> 
+	</target> 
+	<!--compress javascript-->
+</project>

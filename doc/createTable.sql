@@ -19,6 +19,7 @@ create table Info
    CreateDate           datetime,
    Weather              varchar(32),
    Temprature           varchar(32),
+   Level                varchar(32),
    primary key (InfoId)
 );
 
@@ -40,15 +41,16 @@ create table InfoDetail
 /*==============================================================*/
 create table OldBuilding
 (
-   BuidId               int not null,
+   BuildId              int not null,
    Name                 varchar(64),
    ProtectLevel         varchar(32),
    ContactName          varchar(32),
    ContactNum           varchar(32),
-   "Desc"               longblob,
+   BuildDesc            longblob,
    Longitude            numeric(10,6),
    Latitude             numeric(10,6),
-   primary key (BuidId)
+   District             varchar(64),
+   primary key (BuildId)
 );
 
 /*==============================================================*/
@@ -62,5 +64,6 @@ create table User
    UserType             varchar(32),
    UserTypeName         varchar(64),
    UserDept             varchar(64),
+   BuildId              int,
    primary key (UserId)
 );

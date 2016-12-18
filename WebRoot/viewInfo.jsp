@@ -1,6 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>  
 <html>  
 <head>  
@@ -15,14 +16,11 @@
 <link href="<%=request.getContextPath()%>/javascripts/toast/toastr.min.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="<%=request.getContextPath()%>/jquery/jquery.min.js"></script>
-<script src="<%=request.getContextPath()%>/javascripts/fileUpload/vendor/jquery.ui.widget.js"></script>
-<script src="<%=request.getContextPath()%>/javascripts/fileUpload/jquery.iframe-transport.js"></script>
-<script src="<%=request.getContextPath()%>/javascripts/fileUpload/jquery.fileupload.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/bootstrap/js/bootstrap.js"></script>
 <script src="<%=request.getContextPath()%>/javascripts/bootstrap_datepicker/bootstrap-datetimepicker.min.js"></script>
 <script src="<%=request.getContextPath()%>/javascripts/bootstrap_datepicker/bootstrap-datetimepicker.zh-CN.js"></script>
 
-<script src="<%=request.getContextPath()%>/javascripts/plupload-2.2.1/js/plupload.dev.js"></script>
+
 <script src="<%=request.getContextPath()%>/javascripts/toast/toastr.min.js" ></script>
 
 <script type="text/javascript">
@@ -42,27 +40,7 @@ function infoTypeClick(obj){
 		$(this).removeClass('active');
 	});
 	$(obj).parent().addClass('active');
-	if('图片'==text){
-		$('#textInfo').css('display','none');
-		$('#imageInfo').css('display','block');
-		$('#voiceInfo').css('display','none');
-		$('#videoInfo').css('display','none');
-	}else if('文字'==text){
-		$('#textInfo').css('display','block');
-		$('#imageInfo').css('display','none');
-		$('#voiceInfo').css('display','none');
-		$('#videoInfo').css('display','none');
-	}else if('音频'==text){
-		$('#textInfo').css('display','none');
-		$('#imageInfo').css('display','none');
-		$('#voiceInfo').css('display','block');
-		$('#videoInfo').css('display','none');
-	}else if('视频'==text){
-		$('#textInfo').css('display','none');
-		$('#imageInfo').css('display','none');
-		$('#voiceInfo').css('display','none');
-		$('#videoInfo').css('display','block');
-	}
+	
 }
 
 </script>
@@ -83,6 +61,7 @@ function infoTypeClick(obj){
       	<form class="form-horizontal" role="form" id="dataForm">
       		<input type="hidden" name="buildId" class="form-control" value="1" />
       		<input type="hidden" name="userId" class="form-control" value="1" />
+      		
 			  <div class="form-group">
 			    <p class="col-sm-2 text-right">保护对象：</p>
 			    <div class="col-sm-5">
@@ -121,31 +100,60 @@ function infoTypeClick(obj){
 			    </div>
 			  </div>
 		  <div>
-			  <ul class="nav nav-tabs">
-			  	<li class="active"><a href="javascript:void(0);" onclick="infoTypeClick(this);">文字</a></li>
-			  	<li class="" style="display:none"><a href="javascript:void(0);" onclick="infoTypeClick(this);">图片</a></li>
-			  	<li class="" style="display:none"><a href="javascript:void(0);" onclick="infoTypeClick(this);">音频</a></li>
-			  	<li class="" style="display:none"><a href="javascript:void(0);" onclick="infoTypeClick(this);">视频</a></li>
-			  </ul>
+			  
 		  </div>
 		  <div id="textInfo" style="margin-top:20px">
-		  	<div class="form-group">
-			    <label class="col-sm-2 control-label" for="inputEmail3">实时信息：</label>
-			    <div class="col-sm-5">
-			      <textarea class="col-sm-12" id="inputEmail" placeholder="" ></textarea>
-			    </div>
-			  </div>
+		  	
 
 		  </div>
-		  <div id="imageInfo" style="display:none;margin-top:20px">
-		  	<div class="form-group">
-			    <label class="col-sm-2 control-label" for="inputEmail3">实时信息：</label>
-			    <div class="col-sm-5">
-			      <textarea class="col-sm-12" id="inputEmail" placeholder="" ></textarea>
-			    </div>
-			  </div>
+		  <c:if test="${infoType=='image'}">
+		  <div id="imageInfo" style="margin-top:20px">
 			  <div class="form-group">
-			    <label class="col-sm-2 control-label" for="inputEmail3">图片信息：</label>
+			    
+			    
+				    <c:forEach var="model" items="${listInfoDetail}" varStatus="status">
+						<c:choose>
+							<c:when test="${status.index % 3 == 0}">
+								<div class="row">
+									<label class="col-sm-2 control-label" for="inputEmail3"></label>
+									<div class="col-sm-6">
+										<div class="col-sm-4">
+											<a href="#" class="thumbnail">
+												<img data-src="holder.js/200x200" alt="180x180" src="<%=request.getContextPath()%><c:out value="${model.infoDataURL}"/>" style="width: 200px; height: 200px;">
+											</a>
+										</div>
+							</c:when>
+							<c:when test="${status.index % 3 == 2}">
+										<div class="col-sm-4">
+											<a href="#" class="thumbnail">
+												<img data-src="holder.js/200x200" alt="180x180" src="<%=request.getContextPath()%><c:out value="${model.infoDataURL}"/>" style="width: 200px; height: 200px;">
+											</a>
+										</div>
+									</div>
+								</div>
+							</c:when>
+							<c:when test="${status.index % 3 == 1}">
+								<div class="col-sm-4">
+									<a href="#" class="thumbnail">
+										<img data-src="holder.js/200x200" alt="180x180" src="<%=request.getContextPath()%><c:out value="${model.infoDataURL}"/>" style="width: 200px; height: 200px;">
+									</a>
+								</div>
+							</c:when>
+						</c:choose>
+					</c:forEach>
+				
+					<c:if test="${fn:length(listInfoDetail) % 3 == 1}">
+							</div>
+						</div>
+					</c:if>
+					<c:if test="${fn:length(listInfoDetail) % 3 == 2}">
+							</div>
+						</div>
+					</c:if>
+					<c:if test="${fn:length(listInfoDetail) % 3 == 0}">
+							
+					</c:if>
+				</c:if>
 			    <!--  
 			    <div class="col-sm-5">
 			      <div class="row">
@@ -185,69 +193,103 @@ function infoTypeClick(obj){
 					</div>
 			    </div>
 			    -->
-			    <div class="col-sm-5">
-			      <div class="controls fileupload-buttonbar">
-				    <span class="btn btn-success fileinput-button">
-	                    <i class="glyphicon glyphicon-plus"></i>
-	                    <span>Add files...</span>
-	                    <input id="uploadButton1" type="file" name="files[]" multiple />
-	                </span>
-				      
-				  </div>
-			    </div>
-			    <div><input id="testBtn" type="button" class="btn">提交</input></div>
-			    <div id="test"></div>
+			    
+			    
+			    <c:if test="${infoType=='voice'}">
+					  <div id="voiceInfo" style="margin-top:20px">
+						  
+						  <div class="form-group">
+						  	<c:forEach var="model" items="${listInfoDetail}" varStatus="status">
+								<c:choose>
+									<c:when test="${status.index % 3 == 0}">
+										<div class="row">
+											<label class="col-sm-2 control-label" for="inputEmail3"></label>
+											<div class="col-sm-6">
+												<div class="col-sm-4">
+													<a href="<%=request.getContextPath()%><c:out value="${model.infoDataURL}"/>">音频信息</a>
+												</div>
+									</c:when>
+									<c:when test="${status.index % 3 == 2}">
+												<div class="col-sm-4">
+													<a href="<%=request.getContextPath()%><c:out value="${model.infoDataURL}"/>">音频信息</a>
+												</div>
+											</div>
+										</div>
+									</c:when>
+									<c:when test="${status.index % 3 == 1}">
+										<div class="col-sm-4">
+											<a href="<%=request.getContextPath()%><c:out value="${model.infoDataURL}"/>">音频信息</a>
+										</div>
+									</c:when>
+								</c:choose>
+							</c:forEach>
+						
+							<c:if test="${fn:length(listInfoDetail) % 3 == 1}">
+									</div>
+								</div>
+							</c:if>
+							<c:if test="${fn:length(listInfoDetail) % 3 == 2}">
+									</div>
+								</div>
+							</c:if>
+							<c:if test="${fn:length(listInfoDetail) % 3 == 0}">
+									
+							</c:if>
+						    
+						  </div>
+					  </div>
+				  </c:if>
+		  
+		  
+		  		<c:if test="${infoType=='video'}">
+					  <div id="videoInfo" style="margin-top:20px">
+						  
+						  <div class="form-group">
+						  	<c:forEach var="model" items="${listInfoDetail}" varStatus="status">
+								<c:choose>
+									<c:when test="${status.index % 3 == 0}">
+										<div class="row">
+											<label class="col-sm-2 control-label" for="inputEmail3"></label>
+											<div class="col-sm-6">
+												<div class="col-sm-4">
+													<a href="<%=request.getContextPath()%><c:out value="${model.infoDataURL}"/>">视频信息</a>
+												</div>
+									</c:when>
+									<c:when test="${status.index % 3 == 2}">
+												<div class="col-sm-4">
+													<a href="<%=request.getContextPath()%><c:out value="${model.infoDataURL}"/>">视频信息</a>
+												</div>
+											</div>
+										</div>
+									</c:when>
+									<c:when test="${status.index % 3 == 1}">
+										<div class="col-sm-4">
+											<a href="<%=request.getContextPath()%><c:out value="${model.infoDataURL}"/>">视频信息</a>
+										</div>
+									</c:when>
+								</c:choose>
+							</c:forEach>
+						
+							<c:if test="${fn:length(listInfoDetail) % 3 == 1}">
+									</div>
+								</div>
+							</c:if>
+							<c:if test="${fn:length(listInfoDetail) % 3 == 2}">
+									</div>
+								</div>
+							</c:if>
+							<c:if test="${fn:length(listInfoDetail) % 3 == 0}">
+									
+							</c:if>
+						    
+						  </div>
+					  </div>
+				  </c:if>
+		  
 			  </div>
-			  <div>
-			  	
-			  </div>
+
 		  </div>
 		  
-		  <div id="voiceInfo" style="display:none;margin-top:20px">
-		  	<div class="form-group">
-			    <label class="col-sm-2 control-label" for="inputEmail3">实时信息：</label>
-			    <div class="col-sm-5">
-			      <textarea class="col-sm-12" id="inputEmail" placeholder="" ></textarea>
-			    </div>
-			  </div>
-			  
-			  <div class="form-group">
-			    <label class="col-sm-2 control-label" for="inputEmail3">音频信息：</label>
-			    <div class="col-sm-5">
-			      <div class="controls fileupload-buttonbar">
-				    <span class="btn btn-success fileinput-button">
-	                    <i class="glyphicon glyphicon-plus"></i>
-	                    <span>Add files...</span>
-	                    <input type="file" name="files[]" multiple />
-	                </span>
-				      
-				  </div>
-			    </div>
-			  </div>
-		  </div>
-		  
-		  <div id="videoInfo" style="display:none;margin-top:20px">
-		  	<div class="form-group">
-			    <label class="col-sm-2 control-label" for="inputEmail3">实时信息：</label>
-			    <div class="col-sm-5">
-			      <textarea class="col-sm-12" id="inputEmail" placeholder="" ></textarea>
-			    </div>
-			  </div>
-			  
-			  <div class="form-group">
-			    <label class="col-sm-2 control-label" for="inputEmail3">视频信息：</label>
-			    <div class="col-sm-5">
-			      <div class="controls fileupload-buttonbar">
-				    <span class="btn btn-success fileinput-button">
-	                    <i class="glyphicon glyphicon-plus"></i>
-	                    <span>Add files...</span>
-	                    <input type="file" name="files[]" multiple />
-	                </span>
-				      
-				  </div>
-			    </div>
-			  </div>
-		  </div>
 		</form>
 		
     </div>

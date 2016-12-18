@@ -19,9 +19,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class WeatherUtil {
 	public static String WEATHERURL= "http://www.weather.com.cn/data/sk/%s.html";
 	public static String WEATHERURL2 = "http://d1.weather.com.cn/sk_2d/101200101.html";
-	public static String WEATHERURL3 = "https://api.thinkpage.cn/v3/weather/now.json?key=ovptvgg3r2fh1ebz&location=beijing&language=zh-Hans&unit=c";
+	public static String WEATHERURL3 = "https://api.thinkpage.cn/v3/weather/now.json?key=ovptvgg3r2fh1ebz&location=%s&language=zh-Hans&unit=c";
 	public static String getWeatherData(String locationId){
-		String requestURL = String.format(WEATHERURL3, "101200101");
+		String requestURL = String.format(WEATHERURL3, locationId);
+		System.out.println(requestURL);
 		CloseableHttpClient httpclient = HttpClients.createDefault();
 		HttpGet httpget = new HttpGet(requestURL);
 		String result = "";

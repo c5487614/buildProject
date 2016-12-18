@@ -29,11 +29,11 @@ public class MonitorService {
 	public List<Monitor> getLastMonitor(){
 		
 		List<OldBuilding> listOldBuiding = oldBuildingMapper.selectByExample(null);
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-HH-mm hh:mm:ss");
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		List<Monitor> listMonitor = new ArrayList<Monitor>();
 		for(OldBuilding oldBuilding: listOldBuiding){
 			InfoExample infoExample = new InfoExample();
-			infoExample.createCriteria().andBuildIdEqualTo(oldBuilding.getBuidId());
+			infoExample.createCriteria().andBuildIdEqualTo(oldBuilding.getBuildId());
 			infoExample.setOrderByClause("CreateDate DESC");
 			List<Info> listInfo = infoMapper.selectByExample(infoExample);
 			if(listInfo!=null&&listInfo.size()!=0){
@@ -41,7 +41,7 @@ public class MonitorService {
 					Info info = listInfo.get(0);
 					Monitor monitor = new Monitor();
 					monitor.setInfoId(info.getInfoId());
-					monitor.setBiuldId(oldBuilding.getBuidId());
+					monitor.setBiuldId(oldBuilding.getBuildId());
 					monitor.setContactor(oldBuilding.getContactName());
 					monitor.setDistrict(oldBuilding.getDistrict());
 					monitor.setName(oldBuilding.getName());
