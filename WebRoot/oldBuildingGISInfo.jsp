@@ -31,12 +31,12 @@ $(document).ready(function(){
     </div>
     <div class="col-md-9 well">
     	<h3 class="text-center">龙象塔空间信息</h3>
-		<dl>
+		<dl class="paragraph">
 			<dt></dt>
 			<dd><embed src="http://dispatcher.video.qiyi.com/disp/shareplayer.swf?vid=318d4be8be63dae4a941b1e95a211a4c&amp;tvId=4446339309&amp;autoPlay=0&amp;autoChainPlay=0&amp;showSearch=0&amp;showSearchBox=0&amp;showControl=1&amp;autoHideControl=0&amp;showRecommend=0&amp;showFocus=0&amp;showShare=0&amp;showLogo=0&amp;isLoop=0&amp;coop=coop_baiduBaike&amp;bd=1&amp;showDock=0&amp;source=&amp;cid=qc_100001_300089" allowfullscreen="true" quality="high" width="550" height="350" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"></dd>
 		</dl>
-		<dl>
-			<dt>遗址空间信息展示</dt>
+		<dl class="paragraph">
+			<dt>遗址空间信息展示 </dt>
 			<dd>
 				<div class="col-sm-5">
 			      <div class="row">

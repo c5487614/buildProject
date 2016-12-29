@@ -6,3 +6,9 @@ padding-bottom:45%}
 height:0px;
 padding-bottom:45%
 }
+.paragraph dt{
+	font-size:20px;
+}
+.paragraph dd{
+	font-size:18px;
+}
