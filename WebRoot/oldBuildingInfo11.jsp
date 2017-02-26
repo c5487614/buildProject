@@ -9,6 +9,11 @@
 <link href="<%=request.getContextPath()%>/css/index.css" rel="stylesheet" />
 <link href="<%=request.getContextPath()%>/javascripts/imgbox/imgbox.css" rel="stylesheet" />
 
+<script src="<%=request.getContextPath()%>/js/jquery-2.0.3.min.js"></script>
+<script src="<%=request.getContextPath()%>/js/pms.min.js"></script>
+<link href="<%=request.getContextPath()%>/css/pms.css" rel="stylesheet" />
+<link href="<%=request.getContextPath()%>/css/buttons.css" rel="stylesheet" />
+
 <script type="text/javascript" src="<%=request.getContextPath()%>/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/index.js"></script>
@@ -21,32 +26,47 @@ $(document).ready(function(){
 	});
 	$('#menu_oldbuidingInfo').addClass('active');
 	
-	$('a').imgbox();
+	$('dd a').imgbox();
+	$('#menu2').removeClass();
 });
 </script>
-<body>
-<jsp:include page="nav_bar.jsp" />
+<body class="fixedbody">
+<!--#include file="include_navbar.asp"-->
+<jsp:include page="pages/include_navbar.jsp" />
+
 <div class="container-fluid">
 
   <div class="row">
-    <div class="col-md-2 well" style="margin-left:30px;margin-right:30px" id="menu">
-      <!--Sidebar content-->
-      <jsp:include page="nav_menu.jsp" />
-    </div>
-    <div class="col-md-9 well">
+  	<jsp:include page="pages/include_menu.jsp" />
+  	<div class="col-lg-10 col-lg-offset-2 text-center" >
+
+    <div class="col-md-10 well">
     	<h3 class="text-center">龙象塔</h3>
     	<dl class="paragraph">
-			<dt>遗址说明</dt>
+    	
+			<dt>
+				<blockquote class="text-left bg-muted">
+      			<p>遗址说明</p>
+      			</blockquote>
+      		</dt>
 			<dd>龙象塔是在广西首府南宁的邕江江畔，远处连绵青山上的一处宝塔。看到它不由得联想起杭州西湖上矗立的雷峰塔，以及钱塘江畔的六和塔。塔，中国人传奇故事中不可或缺的神秘元素之一，至今在中国人的心里，眼里都是一处神秘的禁地。又名青山塔，是青秀山的标志。位于青秀山之巅，
 始建于明代万历年间，为时任吏部左侍郎的南宁籍进士肖云举所建。取佛经“水行龙力大，陆行象力大”之意，故命名为“龙象塔”。海拔204米，高十多丈，八角九层，重檐砖结构。</dd>
 		</dl>
 		<dl class="paragraph">
-			<dt>建筑资料</dt>
+			<dt>
+				<blockquote class="text-left bg-muted">
+      			<p>建筑资料</p>
+      			</blockquote>
+			</dt>
 			<dd>又名青山塔，是青秀山的标志。位于青秀山之巅，始建于明代万历年间，为时任吏部左侍郎的南宁籍进士肖云举所建。取佛经“水行龙力大，陆行象力大”之意，故命名为“龙象塔”。海拔204米，高十多丈，八角九层，重檐砖结构。
 原塔高挺耸立，有十余丈高，塔为八角形，九级重檐。明代天启四年（1624），龙象塔被雷击塌顶端两层，一直未能修复。直至1937年，邕宁县政府恐塔成为日机轰炸南宁导航目标，而被拆除，从此在青秀山凤翅岭上屹立了数百年的龙象塔彻底地从人们的视线中消失了……解放后，南宁政府为了恢复青秀山风景区，参照明代风格的宝塔，在原塔的基础上，重建了龙象塔。重建后的龙象塔外形仍为八角形，九层，只是结构改为砖混结构。塔高52.35米，宽12米，绿色琉璃瓦，内设旋梯207级直达塔顶，每层檐角下均悬挂铜铃（共72只）。站在塔顶，鸟瞰邕江两岸，抚今追昔，不胜感慨。</dd>
 		</dl>
 		<dl class="paragraph">
-			<dt>龙象塔的由来</dt>
+			<dt>
+				<blockquote class="text-left bg-muted">
+      			<p>龙象塔的由来</p>
+      			</blockquote>
+			</dt>
 			<dd>
 			<p>
 			明朝万历四十七年（1619年），南宁市人萧云举高中进士并担任朝廷吏部侍郎后所建。原塔高30多米，后来被雷电击塌了两层。1937年8月，当地政府怕此塔成为日机轰炸南宁的目标，下令将塔拆除。1985年12月到1987年9月，市政府按明代建筑风格重新建龙象塔。新塔的高度为52.35米，塔基直径12米，八角九层，塔顶部为绿色琉璃瓦，每层翘角下均悬挂铜玲，共72只。塔内有207级旋梯，可从一楼登到九楼，在最高层可俯视南宁市全景。
@@ -60,7 +80,11 @@ $(document).ready(function(){
 			</dd>
 		</dl>
 		<dl class="paragraph">
-			<dt>遗址地形地貌</dt>
+			<dt>
+				<blockquote class="text-left bg-muted">
+      			<p>遗址地形地貌</p>
+      			</blockquote>
+			</dt>
 			<dd>
 				<div class="col-sm-5">
 			      <div class="row">
@@ -75,19 +99,19 @@ $(document).ready(function(){
 					    </a>
 					  </div>
 					  <div class="col-sm-4">
-					    <a href="#" class="thumbnail">
+					    <a href="<%=request.getContextPath()%>/images/longxiangta3.jpg" class="thumbnail">
 					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/longxiangta3.jpg" style="width: 180px; height: 180px;">
 					    </a>
 					  </div>
 					</div>
 					<div class="row">
 					  <div class="col-sm-4">
-					    <a href="#" class="thumbnail">
+					    <a href="<%=request.getContextPath()%>/images/longxiangta4.jpg" class="thumbnail">
 					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/longxiangta4.jpg" style="width: 270px; height: 180px;">
 					    </a>
 					  </div>
 					  <div class="col-sm-4">
-					    <a href="#" class="thumbnail">
+					    <a href="<%=request.getContextPath()%>/images/longxiangta5.jpg" class="thumbnail">
 					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/longxiangta5.jpg" style="width: 180px; height: 180px;">
 					    </a>
 					  </div>
@@ -102,6 +126,7 @@ $(document).ready(function(){
 		</dl>
     </div>
   
+  	</div><!-- <div class="col-lg-12 col-lg-offset-2 text-center" >  -->
   </div>
 </div>
 </body>  

@@ -35,11 +35,12 @@ public class LoginController {
 	BuildService buildService;
 	
 	@RequestMapping(value = "/login.do",produces="application/json;charset=UTF-8")
-	public @ResponseBody Map<String,Object> login(@RequestParam("userId") String userId,
+	public @ResponseBody Map<String,Object> login(@RequestParam("userName") String userId,
 			@RequestParam("userPassword") String userPassword,
 			HttpServletRequest request){
 		Map<String,Object> map = new HashMap<String,Object>();
 		User user = userService.checkUser(userId, userPassword);
+		request.getSession().setAttribute("user", user);
 		if(user==null){
 			map.put("result", "fail");
 		}else{

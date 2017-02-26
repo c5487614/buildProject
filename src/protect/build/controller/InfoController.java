@@ -56,11 +56,13 @@ public class InfoController {
 		if(currentUser!=null&&!currentUser.getUserType().equals("admin")){
 			OldBuilding oldBuilding = buildService.getOldBuildingById(currentUser.getBuildId());
 			System.out.println(oldBuilding.getName());
+			oldBuilding.setContactNum(CommonUtil.createNewGUID());
 			request.setAttribute("building", oldBuilding);
 			request.setAttribute("user", currentUser);
 		}else if(currentUser!=null&&currentUser.getUserType().equals("admin")){
 			OldBuilding oldBuilding = buildService.getOldBuildingById(currentUser.getBuildId());
 			System.out.println(oldBuilding.getName());
+			oldBuilding.setContactNum(CommonUtil.createNewGUID());
 			request.setAttribute("building", oldBuilding);
 			request.setAttribute("user", currentUser);
 		}if(currentUser==null){
@@ -80,7 +82,7 @@ public class InfoController {
 		List<OldBuilding> listOldBuild = buildService.getBuildList();
 		request.setAttribute("listBuild", listOldBuild);
 		try {
-			request.getRequestDispatcher("../manageAddInfo.jsp").forward(request, response);
+			request.getRequestDispatcher("../manageAddInfo2.jsp").forward(request, response);
 		} catch (ServletException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -97,13 +99,13 @@ public class InfoController {
 		try {
 			String buildId = request.getParameter("buildId");
 			if(buildId.equals("1")){
-				request.getRequestDispatcher("../oldBuildingInfo.jsp").forward(request, response);
+				request.getRequestDispatcher("../oldBuildingInfo11.jsp").forward(request, response);
 			}else if(buildId.equals("2")){
-				request.getRequestDispatcher("../oldBuildingInfo2.jsp").forward(request, response);
+				request.getRequestDispatcher("../oldBuildingInfo12.jsp").forward(request, response);
 			}else if(buildId.equals("3")){
-				request.getRequestDispatcher("../oldBuildingInfo3.jsp").forward(request, response);
+				request.getRequestDispatcher("../oldBuildingInfo13.jsp").forward(request, response);
 			}else if(buildId.equals("4")){
-				request.getRequestDispatcher("../oldBuildingInfo4.jsp").forward(request, response);
+				request.getRequestDispatcher("../oldBuildingInfo14.jsp").forward(request, response);
 			}
 			
 		} catch (ServletException e) {
@@ -122,13 +124,13 @@ public class InfoController {
 		try {
 			String buildId = request.getParameter("buildId");
 			if(buildId.equals("1")){
-				request.getRequestDispatcher("../oldBuildingGISInfo.jsp").forward(request, response);
+				request.getRequestDispatcher("../oldBuildingGISInfo11.jsp").forward(request, response);
 			}else if(buildId.equals("2")){
-				request.getRequestDispatcher("../oldBuildingGISInfo2.jsp").forward(request, response);
+				request.getRequestDispatcher("../oldBuildingGISInfo12.jsp").forward(request, response);
 			}else if(buildId.equals("3")){
-				request.getRequestDispatcher("../oldBuildingGISInfo3.jsp").forward(request, response);
+				request.getRequestDispatcher("../oldBuildingGISInfo13.jsp").forward(request, response);
 			}else if(buildId.equals("4")){
-				request.getRequestDispatcher("../oldBuildingGISInfo4.jsp").forward(request, response);
+				request.getRequestDispatcher("../oldBuildingGISInfo14.jsp").forward(request, response);
 			}
 		} catch (ServletException e) {
 			// TODO Auto-generated catch block
@@ -146,13 +148,13 @@ public class InfoController {
 		try {
 			String buildId = request.getParameter("buildId");
 			if(buildId.equals("1")){
-				request.getRequestDispatcher("../oldBuildingSatelliteInfo.jsp").forward(request, response);
+				request.getRequestDispatcher("../oldBuildingSatelliteInfo11.jsp").forward(request, response);
 			}else if(buildId.equals("2")){
-				request.getRequestDispatcher("../oldBuildingSatelliteInfo2.jsp").forward(request, response);
+				request.getRequestDispatcher("../oldBuildingSatelliteInfo12.jsp").forward(request, response);
 			}else if(buildId.equals("3")){
-				request.getRequestDispatcher("../oldBuildingSatelliteInfo3.jsp").forward(request, response);
+				request.getRequestDispatcher("../oldBuildingSatelliteInfo13.jsp").forward(request, response);
 			}else if(buildId.equals("4")){
-				request.getRequestDispatcher("../oldBuildingSatelliteInfo4.jsp").forward(request, response);
+				request.getRequestDispatcher("../oldBuildingSatelliteInfo14.jsp").forward(request, response);
 			}
 		} catch (ServletException e) {
 			// TODO Auto-generated catch block
@@ -185,7 +187,7 @@ public class InfoController {
 //			list.add(monitor);
 			
 			request.setAttribute("listMonitor", list);
-			request.getRequestDispatcher("../monitorInfo.jsp").forward(request, response);
+			request.getRequestDispatcher("../monitorInfo2.jsp").forward(request, response);
 		} catch (ServletException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -210,7 +212,7 @@ public class InfoController {
 			request.setAttribute("infoType", infoType);
 			request.setAttribute("info", info);
 			request.setAttribute("listInfoDetail", list);
-			request.getRequestDispatcher("../viewInfo.jsp").forward(request, response);
+			request.getRequestDispatcher("../viewInfo2.jsp").forward(request, response);
 		} catch (ServletException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
