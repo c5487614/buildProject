@@ -106,6 +106,12 @@ public class InfoController {
 				request.getRequestDispatcher("../oldBuildingInfo13.jsp").forward(request, response);
 			}else if(buildId.equals("4")){
 				request.getRequestDispatcher("../oldBuildingInfo14.jsp").forward(request, response);
+			}else if(buildId.equals("5")){
+				request.getRequestDispatcher("../oldBuildingInfo15.jsp").forward(request, response);
+			}else if(buildId.equals("6")){
+				request.getRequestDispatcher("../oldBuildingInfo16.jsp").forward(request, response);
+			}else if(buildId.equals("7")){
+				request.getRequestDispatcher("../oldBuildingInfo17.jsp").forward(request, response);
 			}
 			
 		} catch (ServletException e) {

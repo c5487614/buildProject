@@ -57,7 +57,7 @@
 }
 
 </style>
-<title>test</title>
+<title>古镇图集</title>
 </head>
 <body>
 

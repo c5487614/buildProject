@@ -6,7 +6,7 @@
 <head>  
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
-<title>古建筑保护系统</title>  
+<title id="myTitle">古建筑保护系统</title>  
 <link href="<%=request.getContextPath()%>/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 <link href="<%=request.getContextPath()%>/css/index.css" rel="stylesheet" />
 <link href="<%=request.getContextPath()%>/css/jquery.fileupload.css" rel="stylesheet">

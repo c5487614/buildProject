@@ -58,6 +58,9 @@
           <a id="addProject" href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=2" class="list-group-item"><span class="glyphicon glyphicon-picture icon-info"></span>&nbsp;&nbsp;真武阁</a>
           <a href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=3" class="list-group-item"><span class="glyphicon glyphicon glyphicon-picture icon-info"></span>&nbsp;&nbsp;归龙斜塔</a>
           <a href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=4" class="list-group-item"><span class="glyphicon glyphicon-picture icon-info"></span>&nbsp;&nbsp;杨美古镇</a>
+          <a href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=5" class="list-group-item"><span class="glyphicon glyphicon-picture icon-info"></span>&nbsp;&nbsp;蔡氏古宅</a>
+          <a href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=6" class="list-group-item"><span class="glyphicon glyphicon-picture icon-info"></span>&nbsp;&nbsp;黄姚古镇</a>
+          <a href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=7" class="list-group-item"><span class="glyphicon glyphicon-picture icon-info"></span>&nbsp;&nbsp;三江风雨桥</a>
         </div><%-- <%=request.getContextPath()%> --%>
       </div>
     </div>

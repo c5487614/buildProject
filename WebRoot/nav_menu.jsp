@@ -19,6 +19,7 @@
 		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=2">真武阁</a></li>
 		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=3">归龙斜塔</a></li>
 		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=4">杨美古镇</a></li>
+		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=5">蔡氏古宅</a></li>
 		  <li class="divider"></li>
 	  </ul>
   </li>
@@ -31,6 +32,7 @@
 		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showGISInfoPage.do?buildId=2">真武阁</a></li>
 		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showGISInfoPage.do?buildId=3">归龙斜塔</a></li>
 		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showGISInfoPage.do?buildId=4">杨美古镇</a></li>
+		  
 		  <li class="divider"></li>
 	  </ul>
   </li>

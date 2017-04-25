@@ -81,6 +81,53 @@ $(document).ready(function(){
 			<p>古代容州，道教盛行。都峤山被道家封为天下第36洞天中的第20洞天（中国的五岳：泰山为第二洞天，衡山为第三洞天，华山为第四洞天，恒山为第五洞天，嵩山为第六洞天。另峨眉山为第七洞天，庐山为第八洞天。洞天指有灵气的风景）。真武阁的修建与命名，是根据道家五行相生相克的理论得来的——都峤山在真武阁之南，又名南山。道家认为：南方属丙丁火，克得容城的茅房常常发生火灾，“南山耸峙。实为火宿”（见《容县志》）。因此，明代的容县人在古经略台上建起了真武阁，内敬踏龟蛇的玄武大帝（真武大帝，水神北帝）像，“祀北帝以镇离火也”。</p>
 			</dd>
 		</dl>
+		
+		<dl class="paragraph">
+			<dt>
+				<blockquote class="text-left bg-muted">
+      			<p>图文说明</p>
+      			</blockquote>
+			</dt>
+			<div class="step" style="width:710px;height:600px" id="title2" >
+				<div class="row">
+					<img style="width:710px;height:430px" src="<%=request.getContextPath()%>/viewImage/7_1.png" alt="" >
+					<div class="panel panel-default">
+					  <div class="panel-body text-left">
+					    真武阁在容县城东绣江北岸一座石台上，建于明万历元年( 1573)􀀀登阁远望，隔着南岸广阔的平原，东南山岭巍然矗立，气势雄壮。阁本身高13米，加上台高近20米，也是周围区域观赏的对象。1982年被国务院定为全国重点文物保护单位。
+					  </div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="step" style="width:850px;height:700px" id="title11" data-x="-5500" data-y="5000" data-scale="1" data-rotate="0">
+				<div class="row">
+					<div class="col-md-5">
+						<img style="width:360px;height:260px" src="<%=request.getContextPath()%>/viewImage/7_2.png" alt="" >
+					</div>
+					<div class="col-md-5 col-md-offset-1">
+						<img style="width:360px;height:260px" src="<%=request.getContextPath()%>/viewImage/7_3.png" alt="" >
+					</div>
+				</div>
+				<div class="row" style="margin-top:10px">
+					<div class="col-md-5">
+						<img style="width:360px;height:260px" src="<%=request.getContextPath()%>/viewImage/7_4.png" alt="" >
+					</div>
+					<div class="col-md-5 col-md-offset-1">
+						<img style="width:350px;height:260px" src="<%=request.getContextPath()%>/viewImage/7_5.png" alt="" >
+					</div>
+				</div>
+				<div class="row">
+					<div class="panel panel-default">
+					  <div class="panel-body text-left">
+					    经略台真武阁座落在在广西容县城东绣江北岸。60年代初建筑学专家、清华大学教授梁思成经详细考察，称之为"我国古代建筑史上罕见的一颗明珠"。1982年真武阁被国务院定为全国重点文物保护单位。
+					  </div>
+					</div>
+				</div>
+			</div>
+			
+			
+		</dl>
+		
 		<dl class="paragraph">
 			<dt>
 				<blockquote class="text-left bg-muted">
