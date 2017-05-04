@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <%-- <script src="${pageContext.request.contextPath}/js/jquery-2.0.3.min.js"></script> --%>
-<title>项目管理系统</title>
+<title>古建筑保护版权所有</title>
 <script>
 	window.onload=function(){  
 		changeheight();  

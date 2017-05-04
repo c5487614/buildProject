@@ -22,7 +22,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="#" class="navbar-brand"><span class="glyphicon glyphicon-th-large"></span>&nbsp;古建筑保护系统</a>
+      <div class="navbar-brand">
+      <a href="#" style="color:#fff;float:left" ><span class="glyphicon glyphicon-th-large"></span>&nbsp;古建筑保护系统</a>
+      <div style="color:#a3a3a3;font-size:12px;line-height:20px;height:50px; overflow:hidden;text-decoration:none;">（广西高校科研项目YB2015YB531测试版）</div>
+      <div style="clear:both""></div>
+      </div>
+      
+      <a href="#"></a>
     </div>
     <!-- 
     <div class="collapse navbar-collapse " id="indexnav">
