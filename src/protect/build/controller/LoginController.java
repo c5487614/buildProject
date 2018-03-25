@@ -58,7 +58,7 @@ public class LoginController {
 		List<OldBuilding> listBuild = buildService.getBuildList();
 		if(listBuild!=null&&listBuild.size()>0){
 			List<Map> list = new ArrayList<Map>();
-			
+			/*
 			for(int i=0;i<listBuild.size();i++){
 				OldBuilding oldBuilding = listBuild.get(i);
 				String weather = WeatherUtil.getWeatherData(oldBuilding.getDistrict());
@@ -70,6 +70,36 @@ public class LoginController {
 				String weatherTemp = jsonNow.get("temperature").asText();
 				String weatherDate = json.get("results").get(0).get("last_update").asText();
 				
+				Map<String,Object> pointMap1 = new HashMap<String,Object>();
+				pointMap1.put("positionName", oldBuilding.getName());
+				pointMap1.put("latitude", oldBuilding.getLatitude());
+				pointMap1.put("longitude", oldBuilding.getLongitude());
+				pointMap1.put("weatherCode", weatherCode);
+				pointMap1.put("weatherText", weatherText);
+				pointMap1.put("weatherTemp", weatherTemp);
+				pointMap1.put("weatherUpdateDate", weatherDate);
+				list.add(pointMap1);
+				
+			}
+			*/
+			String weatherCode = "";
+			String weatherText = "";
+			String weatherTemp = "";
+			String weatherDate = "";
+			boolean isHaveWeather=false;
+			for(int i=0;i<listBuild.size();i++){
+				OldBuilding oldBuilding = listBuild.get(i);
+				if(!isHaveWeather){
+					String weather = WeatherUtil.getWeatherData(oldBuilding.getDistrict());
+					ObjectMapper mapper = new ObjectMapper();  
+					JsonNode json = mapper.readTree(weather);
+					JsonNode jsonNow = json.get("results").get(0).get("now");
+					weatherCode = jsonNow.get("code").asText();
+					weatherText = jsonNow.get("text").asText();
+					weatherTemp = jsonNow.get("temperature").asText();
+					weatherDate = json.get("results").get(0).get("last_update").asText();
+					isHaveWeather=true;
+				}
 				Map<String,Object> pointMap1 = new HashMap<String,Object>();
 				pointMap1.put("positionName", oldBuilding.getName());
 				pointMap1.put("latitude", oldBuilding.getLatitude());

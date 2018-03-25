@@ -29,7 +29,7 @@ function loginEx(){
 	});
 }
 </script>
-<title>古建筑保护系统</title>
+<title>传统村落保护系统</title>
 </head>
 
 <body style="background-color:#f8f6f2;">
@@ -38,7 +38,7 @@ function loginEx(){
 	<div class="row">
   	<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
     	<!-- <form class="form-horizontal" action="login.do" method="post"> -->
-      	<legend class="text-center" style=" color:#555;"><h2><span class="glyphicon glyphicon-th-large"></span>古建筑保护系统</h2></legend>
+      	<legend class="text-center" style=" color:#555;"><h2><span class="glyphicon glyphicon-th-large"></span>传统村落保护系统</h2></legend>
         <div class="row" style="margin-top:30px; margin-bottom:20px;">
         	<div class="col-xs-8 col-xs-offset-2"> 
             <ul class="nav nav-tabs nav-justified">

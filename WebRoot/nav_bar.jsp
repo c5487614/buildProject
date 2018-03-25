@@ -3,7 +3,7 @@
 	<div class="container-fluid">
 	    <div class="navbar-header">
 	      <a class="navbar-brand" href="#">
-	        古建筑数字化保护系统-Ancient Architechture Protect System
+	        传统村落保护系统-Old Vallage Protect System
 	      </a>
 	    </div>
 	  </div>

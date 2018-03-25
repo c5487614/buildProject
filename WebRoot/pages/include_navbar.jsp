@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>项目管理系统</title>
+<title>传统村落保护系统</title>
 <%-- <script src="<%=request.getContextPath()%>/js/jquery-2.0.3.min.js"></script> --%>
 <script type="text/javascript">
 
@@ -23,8 +23,8 @@
         <span class="icon-bar"></span>
       </button>
       <div class="navbar-brand">
-      <a href="#" style="color:#fff;float:left" ><span class="glyphicon glyphicon-th-large"></span>&nbsp;古建筑保护系统</a>
-      <div style="color:#a3a3a3;font-size:12px;line-height:20px;height:50px; overflow:hidden;text-decoration:none;">（广西高校科研项目KY2015YB531测试版）</div>
+      <a href="#" style="color:#fff;float:left" ><span class="glyphicon glyphicon-th-large"></span>&nbsp;传统村落保护系统</a>
+      <div style="color:#a3a3a3;font-size:12px;line-height:20px;height:50px; overflow:hidden;text-decoration:none;">（测试版）</div>
       <div style="clear:both"></div>
       </div>
       

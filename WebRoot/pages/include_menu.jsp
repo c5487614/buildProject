@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <%-- <script src="${pageContext.request.contextPath}/js/jquery-2.0.3.min.js"></script> --%>
-<title>古建筑保护版权所有</title>
+<title>传统村落保护版权所有</title>
 <script>
 	window.onload=function(){  
 		changeheight();  
@@ -48,13 +48,13 @@
     <div class="panel panel-danger">
       <div class="panel-heading">
         <div class="panel-title">
-          <span class="glyphicon glyphicon-object-align-left"></span>&nbsp;&nbsp;<a href="#menu2" data-toggle="collapse" data-parent="#indexmenu">遗址地形地貌展示</a>
+          <span class="glyphicon glyphicon-object-align-left"></span>&nbsp;&nbsp;<a href="#menu2" data-toggle="collapse" data-parent="#indexmenu">传统村落展示</a>
           <a href="#menu2" data-toggle="collapse" data-parent="#indexmenu" class="pull-right"><span class="glyphicon glyphicon-menu-down"></span></a>
         </div>
       </div>
       <div class="collapse panel-collapse" id="menu2">
         <div class="list-group text-center">
-          <a href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=1" class="list-group-item"><span class="glyphicon glyphicon-picture icon-info"></span>&nbsp;&nbsp;龙象塔</a>
+          <a href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=1" class="list-group-item"><span class="glyphicon glyphicon-picture icon-info"></span>&nbsp;&nbsp;老口村那告坡</a>
           <a id="addProject" href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=2" class="list-group-item"><span class="glyphicon glyphicon-picture icon-info"></span>&nbsp;&nbsp;真武阁</a>
           <a href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=3" class="list-group-item"><span class="glyphicon glyphicon glyphicon-picture icon-info"></span>&nbsp;&nbsp;归龙斜塔</a>
           <a href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=4" class="list-group-item"><span class="glyphicon glyphicon-picture icon-info"></span>&nbsp;&nbsp;杨美古镇</a>
@@ -113,7 +113,7 @@
      -->
   </div>
   <p style=" position:absolute; bottom:0; margin:0; width:100%; height:42px; line-height:42px; color:#666; background:#CCC; text-align:center;">
-  	<span class="glyphicon glyphicon-th-large"></span>古建筑保护版权所有
+  	<span class="glyphicon glyphicon-th-large"></span>传统村落保护版权所有
   </p>
   
 </div>

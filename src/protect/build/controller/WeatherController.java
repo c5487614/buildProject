@@ -50,7 +50,8 @@ public class WeatherController {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		String weatherData = WeatherUtil.getWeatherData("101200101");
+//		String weatherData = WeatherUtil.getWeatherData("101200101");
+		String weatherData = WeatherUtil.getWeatherData("WKJ1F428HH2F");
 		ObjectMapper mapper = new ObjectMapper();  
 		JsonNode json = mapper.readTree(weatherData);
 		String weatherCode = json.get("results").get(0).get("now").get("code").asText();

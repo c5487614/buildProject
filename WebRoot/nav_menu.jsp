@@ -15,7 +15,7 @@
   	遗址地形地貌展示
   	<b class="caret"></b></a>
 	  <ul class="dropdown-menu "  role="menu" aria-labelledby="dropdownMenu">
-		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=1">龙象塔</a></li>
+		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=1">那告坡</a></li>
 		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=2">真武阁</a></li>
 		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=3">归龙斜塔</a></li>
 		  <li><a tabindex="-1" href="<%=request.getContextPath()%>/info/showInfoPage.do?buildId=4">杨美古镇</a></li>
