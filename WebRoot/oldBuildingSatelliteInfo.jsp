@@ -30,13 +30,13 @@ $(document).ready(function(){
       <jsp:include page="nav_menu.jsp" />
     </div>
     <div class="col-md-9 well">
-    	<h3 class="text-center">龙象塔卫星地图展示</h3>
+    	<h3 class="text-center">老口村那告坡卫星地图展示</h3>
     	<dl class="paragraph">
-			<dt>遗址一卫星地图说明</dt>
-			<dd>龙象塔GIS地图展示</dd>
+			<dt>老口村那告坡卫星地图说明</dt>
+			<dd>老口村那告坡GIS地图展示</dd>
 		</dl>
 		<dl class="paragraph">
-			<dt>遗址一卫星地图展示</dt>
+			<dt>老口村那告坡卫星地图展示</dt>
 			<dd>
 				<div class="col-sm-12">
 			      <div class="row">
@@ -53,22 +53,22 @@ $(document).ready(function(){
 						  <!-- Wrapper for slides -->
 						  <div class="carousel-inner" role="listbox">
 						    <div class="item active">
-						      <img src="<%=request.getContextPath()%>/images/gis_longxiangta.jpg" alt="" style="width:800px; height:450px;">
+						      <img src="<%=request.getContextPath()%>/images/gis_nagaopo1.png" alt="" style="width:800px; height:450px;">
 						      <div class="carousel-caption">
 						      </div>
 						    </div>
 						    <div class="item">
-						      <img src="<%=request.getContextPath()%>/images/gis_longxiangta1.jpg" alt="" style="width:800px; height:450px;">
+						      <img src="<%=request.getContextPath()%>/images/gis_nagaopo2.png" alt="" style="width:800px; height:450px;">
 						      <div class="carousel-caption">
 						      </div>
 						    </div>
 						    <div class="item">
-						      <img src="<%=request.getContextPath()%>/images/gis_longxiangta2.jpg" alt="" style="width:800px; height:450px;">
+						      <img src="<%=request.getContextPath()%>/images/gis_nagaopo3.png" alt="" style="width:800px; height:450px;">
 						      <div class="carousel-caption">
 						      </div>
 						    </div>
 						    <div class="item">
-						      <img src="<%=request.getContextPath()%>/images/gis_longxiangta3.jpg" alt="" style="width:800px; height:450px;">
+						      <img src="<%=request.getContextPath()%>/images/gis_nagaopo4.png" alt="" style="width:800px; height:450px;">
 						      <div class="carousel-caption">
 						      </div>
 						    </div>

@@ -23,6 +23,7 @@ $(document).ready(function(){
 	});
 	$('#menu_satallite').addClass('active');
 	$('#menu4').removeClass();
+	
 });
 </script>
 <body class="fixedbody">
@@ -37,14 +38,15 @@ $(document).ready(function(){
   	<div class="col-lg-10 col-lg-offset-2 text-center" >
   	
     <div class="col-md-10 well">
-    	<h3 class="text-center">龙象塔卫星地图展示</h3>
+    	<h3 class="text-center">老口村那告坡卫星地图展示</h3>
     	<dl class="paragraph">
-			
+			<dt>老口村那告坡卫星地图展示</dt>
+			<dd></dd>
 		</dl>
 		<dl class="paragraph">
 			<dt>
 				<blockquote class="text-left bg-muted">
-      			<p>遗址空间信息展示 </p>
+      			<p>老口村那告坡卫星地图展示 </p>
       			</blockquote>
 			</dt>
 			<dd>
@@ -63,22 +65,22 @@ $(document).ready(function(){
 						  <!-- Wrapper for slides -->
 						  <div class="carousel-inner" role="listbox">
 						    <div class="item active">
-						      <img src="<%=request.getContextPath()%>/images/gis_longxiangta.jpg" alt="" style="width:800px; height:450px;">
+						      <img src="<%=request.getContextPath()%>/images/gis_nagaopo1.png" alt="" style="width:800px; height:450px;">
 						      <div class="carousel-caption">
 						      </div>
 						    </div>
 						    <div class="item">
-						      <img src="<%=request.getContextPath()%>/images/gis_longxiangta1.jpg" alt="" style="width:800px; height:450px;">
+						      <img src="<%=request.getContextPath()%>/images/gis_nagaopo2.png" alt="" style="width:800px; height:450px;">
 						      <div class="carousel-caption">
 						      </div>
 						    </div>
 						    <div class="item">
-						      <img src="<%=request.getContextPath()%>/images/gis_longxiangta2.jpg" alt="" style="width:800px; height:450px;">
+						      <img src="<%=request.getContextPath()%>/images/gis_nagaopo3.png" alt="" style="width:800px; height:450px;">
 						      <div class="carousel-caption">
 						      </div>
 						    </div>
 						    <div class="item">
-						      <img src="<%=request.getContextPath()%>/images/gis_longxiangta3.jpg" alt="" style="width:800px; height:450px;">
+						      <img src="<%=request.getContextPath()%>/images/gis_nagaopo4.png" alt="" style="width:800px; height:450px;">
 						      <div class="carousel-caption">
 						      </div>
 						    </div>
@@ -95,8 +97,8 @@ $(document).ready(function(){
 						  </a>
 						</div>
 					  </div>
+					  
 					</div>
-					
 			    </div>
 			</dd>
 		</dl>

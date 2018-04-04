@@ -18,6 +18,7 @@
 <script src="<%=request.getContextPath()%>/js/pms.min.js"></script>
 <link href="<%=request.getContextPath()%>/css/pms.css" rel="stylesheet" />
 <link href="<%=request.getContextPath()%>/css/buttons.css" rel="stylesheet" />
+
 <script type="text/javascript" src="<%=request.getContextPath()%>/javascripts/imgbox/jquery.imgbox.js"></script>
 <script type="text/javascript"> 
 $(document).ready(function(){
@@ -25,6 +26,7 @@ $(document).ready(function(){
 		$(this).removeClass('active');
 	});
 	$('#menu_oldbuidingInfo').addClass('active');
+	
 	$('dd a').imgbox();
 	$('#menu2').removeClass();
 });
@@ -41,88 +43,128 @@ $(document).ready(function(){
   	<div class="col-lg-10 col-lg-offset-2 text-center" >
   	
     <div class="col-md-10 well">
-    	<h3 class="text-center">归龙斜塔</h3>
+    	<h3 class="text-center">古辣镇蔡氏古宅</h3>
     	<dl class="paragraph">
 			<dt>
 				<blockquote class="text-left bg-muted">
-      			<p>遗址说明</p>
+      			<p>村落历史</p>
       			</blockquote>
 			</dt>
 			<dd class="text-left">
-			<p>归龙斜塔又称左江斜塔和水宝塔，位于广西崇左市郊东北二公里处，建在左江中的石头岛——熬头峰上，处于急湾激流之中，地势惊险。该塔是明朝知府李有梅于天启年间（1621年）建造，当时建三层，清康熙三十五年（1692年）知府徐越加建两层，成为五层砖塔，塔底直径5米，塔基身总高23.184米，塔身18.28米，塔身呈八角面体。</p>
 			
+			<p>
+			蔡氏古宅位于柳南高速公路边上的广西宾阳县古辣镇境内，是保存较为完好的古建筑群，堪称中国岭南古建筑的瑰宝。
+			</p>
+			<p>
+			据蔡氏后人介绍，占地70多亩的蔡家大院始建于明代，后历经数百年的不断修缮，逐渐形成规模。只可惜最古老的建筑毁于清代咸丰初年的一次兵燹。现存的大多建筑是清代举人蔡凌霄及蔡氏家族于咸丰九年后重修的，虽历经风风雨雨，许多建筑至今仍保护完好。
+			</p>
+			<p>
+			走进蔡家大院，人们禁不住被这座古色古香的深宅大院的气派所吸引，更为大院的建筑风格和建筑艺术所惊叹。
+			</p>
+			<p>
+			大院建筑群分为"老屋"和"新屋"两部分共三处，均为三进式青砖瓦房。正厅最高，二厅、三厅渐次递减。古建筑群中的"新屋"部分更显特色，对称艺术突出，更加体现出古屋的庄严与威势。
+			</p>
+			<p>
+			院内地面用大青石或青砖铺就，主道和非主道的铺设也有等级差别。房屋雕梁画栋、飞檐走檩，门窗饰以"福禄寿"等篆文图案，前门亦有山水画及篆文书法。
+			</p>
+			<p>
+			 大院还保存着具有典型西方建筑特点的洋楼，虽然破坏较为严重，但是风貌依旧。
+			</p>
+			<p>
+			蔡家大院整座建筑富有艺术性，体现出深厚的文化底蕴，是明清时期岭南民居的典型代表，具有较高的旅游开发和文物保护价值。
+			</p>
 			</dd>
 		</dl>
-		<dl class="paragraph">
-			<dt>
-				<blockquote class="text-left bg-muted">
-      			<p>历史文化</p>
-      			</blockquote>
-			</dt>
-			<dd class="text-left">
-			<p>归龙斜塔还有很优美的传说。相传，在明朝庆隆年间，左江中间突然冒出了一块巨石，挡住了江流，旋涡浪翻，使许多过往的船只遭到没顶之灾。人们认定这是江中有妖龙在作怪，便修建这座宝塔以镇妖龙，故名为镇海宝塔。但妖龙不服，宝塔屡建屡塌。后来得到仙人的帮助，搬来半座山奠基，才把宝塔建成。可是妖龙仍不时出没为害。有一壮族青年得到仙人传授的整治妖龙之法后，把妖龙杀死，天下才太平，人们遂把镇海宝塔称为归龙塔。</p>
-			</dd>
-		</dl>
-		<dl class="paragraph">
-			<dt>
-				<blockquote class="text-left bg-muted">
-      			<p>建筑特色</p>
-      			</blockquote>
-			</dt>
-			<dd class="text-left">
-			<p>塔顶铸了一铣质葫芦盖顶，从不生锈，塔八面正檐，每一檐角悬挂铜铃一个，随风摆动叮当作响，悦耳动听，塔的外观古朴雄健，昂然挺拔，塔底层南和西南各开一拱门，从二层各开一个小窗。塔内螺旋砖梯逆时针绕至顶层，人走在阶梯上，倾斜感很强，据测塔身倾斜度为4度24分64秒，倾斜方向为西南偏西52度16分30秒，据专家考证是工匠在建造时考虑到江心风力和地基等因素而精心设计而成，是唯一人为建造的斜塔，整个宝塔依山顺势，结构稳固，造型和谐，自建成至今，虽已历时300多年，屡遭洪水冲刷，日晒风吹雨打，它仍然屹立不倒，充分体现我国古代人民建筑技术的高明。倾斜的宝塔，世上不多见，而坐落在江河的急流旋涡中间，更属奇观。它与苏州虎丘塔、辽宁绥中塔、上海松江护珠塔、湖北当阳铁塔、意大利比萨斜塔斜塔、德国肯道塔、英国议会大厦方塔共誉为世界八大斜塔</p>
-			</dd>
-		</dl>
+		
+		
+		
 		
 		<dl class="paragraph">
 			<dt>
 				<blockquote class="text-left bg-muted">
-      			<p>遗址地形地貌</p>
+      			<p>村落图片</p>
       			</blockquote>
 			</dt>
 			<dd>
-				<div class="col-sm-5">
+				<div class="col-sm-10">
 			      <div class="row">
-					  <div class="col-sm-4">
-					    <a href="<%=request.getContextPath()%>/images/glxt1.jpg" class="thumbnail">
-					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/glxt1.jpg" style="width: 180px; height: 180px;">
+					  <div class="col-sm-2">
+					    <a  href="<%=request.getContextPath()%>/images/gulacun1.jpg" class="thumbnail">
+					      <img src="<%=request.getContextPath()%>/images/gulacun1.jpg" >
 					    </a>
 					  </div>
-					  <div class="col-sm-4">
-					    <a href="<%=request.getContextPath()%>/images/glxt2.jpg" class="thumbnail">
-					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/glxt2.jpg" style="width: 270px; height: 180px;">
+					  <div class="col-sm-2">
+					    <a  href="<%=request.getContextPath()%>/images/gulacun2.jpg" class="thumbnail">
+					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/gulacun2.jpg" >
 					    </a>
 					  </div>
-					  <div class="col-sm-4">
-					    <a href="<%=request.getContextPath()%>/images/glxt3.jpg" class="thumbnail">
-					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/glxt3.jpg" style="width: 180px; height: 180px;">
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/gulacun3.jpg" class="thumbnail">
+					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/gulacun3.jpg" >
+					    </a>
+					  </div>
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/gulacun4.jpg" class="thumbnail">
+					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/gulacun4.jpg" >
+					    </a>
+					  </div>
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/gulacun5.jpg" class="thumbnail">
+					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/gulacun5.jpg" >
 					    </a>
 					  </div>
 					</div>
 					<div class="row">
-					  <div class="col-sm-4">
-					    <a href="<%=request.getContextPath()%>/images/glxt4.jpg" class="thumbnail">
-					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/glxt4.jpg" style="width: 270px; height: 180px;">
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/gulacun6.jpg" class="thumbnail">
+					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/gulacun6.jpg">
 					    </a>
 					  </div>
-					  <div class="col-sm-4">
-					    <a href="<%=request.getContextPath()%>/images/glxt5.jpg" class="thumbnail">
-					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/glxt5.jpg" style="width: 180px; height: 180px;">
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/gulacun7.jpg" class="thumbnail">
+					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/gulacun7.jpg" >
 					    </a>
 					  </div>
-					  <div class="col-sm-4">
-					    <a href="<%=request.getContextPath()%>/images/glxt6.jpg" class="thumbnail">
-					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/glxt6.jpg" style="width: 180px; height: 180px;">
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/gulacun8.jpg" class="thumbnail">
+					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/gulacun8.jpg" style="width: 270px; height: 180px;">
 					    </a>
 					  </div>
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/gulacun9.jpg" class="thumbnail">
+					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/gulacun9.jpg" style="width: 270px; height: 180px;">
+					    </a>
+					  </div>
+					  <!--
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/nagaopo8.jpg" class="thumbnail">
+					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/nagaopo8.jpg" style="width: 270px; height: 180px;">
+					    </a>
+					  </div>
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/nagaopo9.jpg" class="thumbnail">
+					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/nagaopo9.jpg" style="width: 270px; height: 180px;">
+					    </a>
+					  </div>
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/nagaopo10.jpg" class="thumbnail">
+					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/nagaopo10.jpg" style="width: 270px; height: 180px;">
+					    </a>
+					  </div>
+					   
+					  <div class="col-sm-4">
+					    <a  href="#" class="thumbnail">
+					      <img data-src="holder.js/180x180" alt="180x180" src="data:image/png;base64,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" style="width: 180px; height: 180px;">
+					    </a>
+					  </div>
+					   -->
 					</div>
 			    </div>
 			</dd>
 		</dl>
     </div>
-    
-    </div><!-- <div class="col-lg-12 col-lg-offset-2 text-center" >  -->
   
+  	</div><!-- <div class="col-lg-12 col-lg-offset-2 text-center" >  -->
   </div>
 </div>
 </body>  

@@ -43,132 +43,106 @@ $(document).ready(function(){
   	<div class="col-lg-10 col-lg-offset-2 text-center" >
   	
     <div class="col-md-10 well">
-    	<h3 class="text-center">真武阁</h3>
+    	<h3 class="text-center">那良村那蒙坡</h3>
     	<dl class="paragraph">
 			<dt>
 				<blockquote class="text-left bg-muted">
-      			<p>遗址说明</p>
+      			<p>村落历史</p>
       			</blockquote>
 			</dt>
 			<dd class="text-left">
-			<p>真武阁在容县城东绣江北岸一座石台上，建于明万历元年（1573）。登阁远望，隔着南岸广阔的平原，东南山岭巍然矗立，气势雄壮。阁本身高13米，加上台高近20米，也是周围区域观赏的对象。1982年被国务院定为全国重点文物保护单位。</p>
-			<p>经略台始建于唐乾元二年（759年）。著名诗人元结到容县都督府任容管经略使，在容州城东筑经略台，用以操练兵士，游观风光。明朝初年在经略台上建真武庙，明万历元年（1573年）将真武阁庙增建成三层楼阁，这就是现在的真武阁。</p>
-			<p>真武阁，阁三层，三檐，呈方塔形，通高13.2米，面宽13.8米，进深11.2米，全阁用3000条大小不一的格木构件，巧妙地串联吻合，曾经受多次地震和狂风的袭击依然安然无恙，被兴誉为“天南杰构”。</p>
+			
+			<p>
+			相传，500年前，一个年轻人从刘圩游历到此，看到这里山清水秀，具有风水中“一龙二虎，四鹤归潭，五水归元”之势，很是高兴，于是决定定居下来，并改姓为“黄”（取谐音“旺”之意）。之后，有一个陆姓老板做生意途经此地，被这里的美丽风光所吸引，遂有迁居于此的念头，于是与黄姓青年商量。黄姓青年把陆老板带到山顶，对他说：你站在这里向前看，能看到的地方就是你的田地（你的田地用壮话来说就是“那蒙”）。不久，孙姓人家又从与那蒙相距1.5公里的新江街搬迁过来，同样也采用了这样的方法确定居住地。数百年过去，定居下来的黄、陆、孙三姓人家亲如兄弟，和睦相处，谱写了民族团结和谐篇章。
+			</p>
+			<p>那蒙坡历史悠久，形成了比较独特的壮族文化，嘹罗山歌和还球歌圩习俗，传唱百年，远近闻名。在邕宁区各乡镇歌圩中，新江镇那蒙坡、那团村一带盛行的以“抛绣球”为原型、“嘹啰”山歌为主调的“还球歌圩”最具特色，被称为“千年古调”的壮族三声部民歌“嘹啰山歌”，早在2008年便列入了自治区非物质文化遗产名录。</p>
+			<p>
+			在那蒙坡的历史中，曾经留下深刻印记的，是上世纪60年代，先后有三批知识青年响应党中央和毛主席号召，参加上山下乡运动来到这里插队，接受贫下中农再教育。这三批热血青年共37人，他们把那蒙坡当作自己的家，把满腔热血和火热的青春贡献给那蒙坡，在广阔天地里历经磨炼，不断成长，一部份人后来进入政界、商界、学术界、文艺界等等，成为社会精英。
+			</p>
+			<p>
+			那蒙坡内分布有大小不一的七个水塘，四周青山环绕，宛如绿色屏障，得天独厚的自然环境令人赞叹不已。为此，有关部门在对那蒙坡进行规划建设时，严格遵循“因地制宜、合理布局、保护环境、延续特色”的原则，充分利用丘陵、缓坡和其它非耕地，做到既保护整体景观，又可以挖掘文化内涵，他们在“山容水意、竹乡壮韵”这一设计理念指导下，以良好的山水格局和自然环境为基底，突出壮族特色韵味，将自然景观和人文景观有机结合，形成自然朴素、清幽闲适、景观优雅、有文脉传承的可持续发展的新农村风貌。
+			</p>
+			<p>
+			为遵从那蒙坡原有自然空间布局，在对村内七个水塘的水质进行改造的同时，严格按照“二湖、五片、五组团”的整体规划，利用水塘连成的水域空间，建造知青湖和那陆湖，并在周边广设景观带，使之成为那蒙美丽的明信片。与此同时，用心经营好那蒙坡自然形成的五片绿化空间，精雕细琢，打造成具有悠闲功能的公共绿地；并在原有五个居住组团基础上，科学规划，合理布局，相应增加宅基地，以满足今后村庄居住发展。此外，在道路、空间、建筑、绿化及其他综合技术指标等方面，均作了细致而详尽的设计，努力展示好那蒙坡最动人的风光、风情和风貌。
+			</p>
+			<p>
+			 今天的那蒙坡，一幢幢楼房掩映在绿树翠竹丛中，新旧相衬，错落有致；美丽的庭院和各处景观正形成各自园林特色；远望那蒙，青山碧水，老村新貌，生机盎然，一派安宁和谐景象，把人带入心旷神怡的境地，一座“山容水意”、寓情于景的综合示范村正走出深闺，大方向世人展现其亮丽容颜。
+			</p>
 			</dd>
 		</dl>
-		<dl class="paragraph">
-			<dt>
-				<blockquote class="text-left bg-muted">
-      			<p>建筑特色</p>
-      			</blockquote>
-			</dt>
-			<dd class="text-left">
-			<p>真武阁有三大特色：一是地基既没有坚硬的石头，也没有牢固的钢筋水泥，而全是在砖墙内填上夯实的河砂，经略台、真武阁建在砂堆上，历千年而不倒；二是全楼阁不用一颗钉子，全部是木隼结构，以杠杆原理串联吻合，数百年里却稳如泰山；三是二楼中有四根大柱子承受上层楼板、梁、柱和屋瓦的千钧重量，柱脚却悬空不落地。</p>
-			<p>真武阁是一座完全木质结构的建筑物，整个楼阁共有三层，本身高13米，加上台高近20米。全阁为杠杆式纯木结构，通高13.2米，面宽13.8米，进深11.2米，全阁不用一件铁器，用近3000条格木构件，凿榫卯眼，斜穿直套，以杠杆结构原理，串联吻合，彼此扶持，互相制约，合理协调组成一个优美稳固的统一整体。</p>
-			<p>真武阁二十根笔直挺立的巨柱中，八根直通顶楼，是三层楼阁全部荷载的支柱。柱之间用梁枋相互连接，柱上各施有四朵斗拱，上面承托四根棱木，有力地把楼阁托住。二层楼的四根大内柱，虽承受上层楼板、梁架、配柱和阁瓦、脊饰的沉重荷载，柱脚却悬空离地3厘米，是全阁结构中最精巧、最奇特的部分。这是“杠杆原理”所造成的悬柱奇观，就是将从底层通到二层的八根通柱，变成二、三层的支点，在通柱上分上下两层横贯七十二根（每柱九根，共七十二根）挑枋,这些挑枋象天平上的横杆一样，外面长的一端挑起宽阔的瓦檐,里面短的一端跳起二层的内柱，使它头顶千斤,脚不落地。这种方法在我国的古建筑中应用较多，而真武阁则用得特别巧妙奇绝。四百多年来，真武阁象一架精确的的天平，经历了5次地震、3次特大台风，仍安然无恙，其结构之奇巧，举世无双，被誉为“天南杰构”、“天南奇观”、“古建明珠”、“天下一绝”，在当地的民间故事中更是鲁班建造的“神仙楼”。</p>
-			<p></p>
-			<p></p>
-			</dd>
-		</dl>
-		<dl class="paragraph">
-			<dt>
-				<blockquote class="text-left bg-muted">
-      			<p>历史文化</p>
-      			</blockquote>
-			</dt>
-			<dd class="text-left">
-			<p>真武阁二层以上比底层收小很多，三重屋檐出挑深远而楼层很低，比一般楼阁的出檐节奏更快，有强烈的韵律感和动势，使得它不象是一座三层建筑，倒更象一座单层建筑而有三层重檐。但它又较一般重檐建筑更为从容和层次鲜明。屋坡舒缓流畅，角翘简洁，增加了舒展大度的气魄，非常清新飘逸，是充分表现中国建筑屋顶美的佳作。真武阁不以浓丽华贵取胜，而以轻灵素雅见长，灰黑色的铁黎木不加油饰，屋面为小青瓦镶绿脊，色调极清雅柔和。</p>
-			<p>古代容州，道教盛行。都峤山被道家封为天下第36洞天中的第20洞天（中国的五岳：泰山为第二洞天，衡山为第三洞天，华山为第四洞天，恒山为第五洞天，嵩山为第六洞天。另峨眉山为第七洞天，庐山为第八洞天。洞天指有灵气的风景）。真武阁的修建与命名，是根据道家五行相生相克的理论得来的——都峤山在真武阁之南，又名南山。道家认为：南方属丙丁火，克得容城的茅房常常发生火灾，“南山耸峙。实为火宿”（见《容县志》）。因此，明代的容县人在古经略台上建起了真武阁，内敬踏龟蛇的玄武大帝（真武大帝，水神北帝）像，“祀北帝以镇离火也”。</p>
-			</dd>
-		</dl>
+		
+		
+		
 		
 		<dl class="paragraph">
 			<dt>
 				<blockquote class="text-left bg-muted">
-      			<p>图文说明</p>
-      			</blockquote>
-			</dt>
-			<div class="step" style="width:710px;height:600px" id="title2" >
-				<div class="row">
-					<img style="width:710px;height:430px" src="<%=request.getContextPath()%>/viewImage/7_1.png" alt="" >
-					<div class="panel panel-default">
-					  <div class="panel-body text-left">
-					    真武阁在容县城东绣江北岸一座石台上，建于明万历元年( 1573)􀀀登阁远望，隔着南岸广阔的平原，东南山岭巍然矗立，气势雄壮。阁本身高13米，加上台高近20米，也是周围区域观赏的对象。1982年被国务院定为全国重点文物保护单位。
-					  </div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="step" style="width:850px;height:700px" id="title11" data-x="-5500" data-y="5000" data-scale="1" data-rotate="0">
-				<div class="row">
-					<div class="col-md-5">
-						<img style="width:360px;height:260px" src="<%=request.getContextPath()%>/viewImage/7_2.png" alt="" >
-					</div>
-					<div class="col-md-5 col-md-offset-1">
-						<img style="width:360px;height:260px" src="<%=request.getContextPath()%>/viewImage/7_3.png" alt="" >
-					</div>
-				</div>
-				<div class="row" style="margin-top:10px">
-					<div class="col-md-5">
-						<img style="width:360px;height:260px" src="<%=request.getContextPath()%>/viewImage/7_4.png" alt="" >
-					</div>
-					<div class="col-md-5 col-md-offset-1">
-						<img style="width:350px;height:260px" src="<%=request.getContextPath()%>/viewImage/7_5.png" alt="" >
-					</div>
-				</div>
-				<div class="row">
-					<div class="panel panel-default">
-					  <div class="panel-body text-left">
-					    经略台真武阁座落在在广西容县城东绣江北岸。60年代初建筑学专家、清华大学教授梁思成经详细考察，称之为"我国古代建筑史上罕见的一颗明珠"。1982年真武阁被国务院定为全国重点文物保护单位。
-					  </div>
-					</div>
-				</div>
-			</div>
-			
-			
-		</dl>
-		
-		<dl class="paragraph">
-			<dt>
-				<blockquote class="text-left bg-muted">
-      			<p>遗址地形地貌</p>
+      			<p>村落图片</p>
       			</blockquote>
 			</dt>
 			<dd>
-				<div class="col-sm-5">
+				<div class="col-sm-10">
 			      <div class="row">
-					  <div class="col-sm-4">
-					    <a href="<%=request.getContextPath()%>/images/zwg1.jpg" class="thumbnail">
-					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/zwg1.jpg" style="width: 180px; height: 180px;">
+					  <div class="col-sm-2">
+					    <a  href="<%=request.getContextPath()%>/images/namengpo1.jpg" class="thumbnail">
+					      <img src="<%=request.getContextPath()%>/images/namengpo1.jpg" >
 					    </a>
 					  </div>
-					  <div class="col-sm-4">
-					    <a href="<%=request.getContextPath()%>/images/zwg2.jpg" class="thumbnail">
-					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/zwg2.jpg" style="width: 270px; height: 180px;">
+					  <div class="col-sm-2">
+					    <a  href="<%=request.getContextPath()%>/images/namengpo2.jpg" class="thumbnail">
+					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/namengpo2.jpg" >
 					    </a>
 					  </div>
-					  <div class="col-sm-4">
-					    <a href="<%=request.getContextPath()%>/images/zwg3.jpg" class="thumbnail">
-					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/zwg3.jpg" style="width: 180px; height: 180px;">
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/namengpo3.jpg" class="thumbnail">
+					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/namengpo3.jpg" >
+					    </a>
+					  </div>
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/namengpo4.jpg" class="thumbnail">
+					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/namengpo4.jpg" >
+					    </a>
+					  </div>
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/namengpo5.jpg" class="thumbnail">
+					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/namengpo5.jpg" >
 					    </a>
 					  </div>
 					</div>
 					<div class="row">
-					  <div class="col-sm-4">
-					    <a href="<%=request.getContextPath()%>/images/zwg4.jpg" class="thumbnail">
-					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/zwg4.jpg" style="width: 270px; height: 180px;">
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/namengpo6.jpg" class="thumbnail">
+					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/namengpo6.jpg">
 					    </a>
 					  </div>
-					  <div class="col-sm-4">
-					    <a href="<%=request.getContextPath()%>/images/zwg5.jpg" class="thumbnail">
-					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/zwg5.jpg" style="width: 180px; height: 180px;">
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/namengpo7.jpg" class="thumbnail">
+					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/namengpo7.jpg" >
 					    </a>
 					  </div>
-					  <div class="col-sm-4">
-					    <a href="<%=request.getContextPath()%>/images/zwg6.jpg" class="thumbnail">
-					      <img data-src="holder.js/180x180" alt="180x180" src="<%=request.getContextPath()%>/images/zwg6.jpg" style="width: 180px; height: 180px;">
+					  <!--
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/nagaopo8.jpg" class="thumbnail">
+					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/nagaopo8.jpg" style="width: 270px; height: 180px;">
 					    </a>
 					  </div>
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/nagaopo9.jpg" class="thumbnail">
+					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/nagaopo9.jpg" style="width: 270px; height: 180px;">
+					    </a>
+					  </div>
+					  <div class="col-sm-2">
+					    <a href="<%=request.getContextPath()%>/images/nagaopo10.jpg" class="thumbnail">
+					      <img data-src="holder.js/270x180" alt="180x180" src="<%=request.getContextPath()%>/images/nagaopo10.jpg" style="width: 270px; height: 180px;">
+					    </a>
+					  </div>
+					   
+					  <div class="col-sm-4">
+					    <a  href="#" class="thumbnail">
+					      <img data-src="holder.js/180x180" alt="180x180" src="data:image/png;base64,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" style="width: 180px; height: 180px;">
+					    </a>
+					  </div>
+					   -->
 					</div>
 			    </div>
 			</dd>
