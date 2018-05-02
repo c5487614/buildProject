@@ -351,7 +351,7 @@ function setWeather(text){
       		<input type="hidden" name="userId" class="form-control" value="1" />
       		<input type="hidden" name="infoId" value="<jsp:getProperty property="contactNum" name="building" />" class="form-control"/>
 			  <div class="form-group">
-			    <label class="col-sm-2 control-label" for="inputEmail3">保护对象：</label>
+			    <label class="col-sm-2 control-label" for="inputEmail3">保护村落：</label>
 			    <div class="col-sm-5">
 			    	<!-- 
 			      <input type="text" class="form-control" value="<jsp:getProperty property="name" name="building" />" id="buildName" name="buildName" placeholder="Email" readonly>

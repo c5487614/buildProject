@@ -72,7 +72,7 @@ $(document).ready(function(){
 				var j = 0;
 				$('#monitorTableTBody').empty();
 				var html = '<tr>'+
-					'<th>建筑名称</th>'+
+					'<th>村落名称</th>'+
 					'<th>所在地区</th>'+
 					'<th>保护等级</th>'+
 					'<th>更新时间</th>'+
@@ -89,12 +89,12 @@ $(document).ready(function(){
 					if(item.level=='警告'){
 						tr = '<tr class="warning">';
 						toastMsg.level = 'warning';
-						toastMsg.msg = '请注意，建筑[' + item.name + ']的情况';
+						toastMsg.msg = '请注意，村落[' + item.name + ']的情况';
 						toastList[j++] = toastMsg;
 					}else if(item.level=='危险'){
 						tr = '<tr class="danger">';
 						toastMsg.level = 'danger';
-						toastMsg.msg = '请注意，建筑[' + item.name + ']的情况';
+						toastMsg.msg = '请注意，村落[' + item.name + ']的情况';
 						toastList[j++] = toastMsg;
 					}else{
 						tr = '<tr class="success">';
@@ -152,7 +152,7 @@ $(document).ready(function(){
 			<caption>实时监控列表</caption>
 			<tbody id="monitorTableTBody">
 			<tr>
-				<th>建筑名称</th>
+				<th>村落名称</th>
 				<th>所在地区</th>
 				<th>保护等级</th>
 				<th>更新时间</th>

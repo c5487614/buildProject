@@ -79,7 +79,20 @@
 	    	</fileset>
 	    </war> 
 	</target>
-	
+	<target name="war_prod_village" depends="compile">
+		<copy todir="dist/WebRoot">
+		    <fileset dir="WebRoot">
+		      <exclude name=".svn/*.*"/>
+		      <exclude name="**/applicationContext.xml" />
+		    </fileset>
+		</copy>
+		<copy overwrite="true" file="config/prod/spring-context.xml" tofile="dist/WebRoot/WEB-INF/spring-context.xml"/>
+	    <war destfile="dist/VillageProtect.war" webxml="dist/WebRoot/WEB-INF/web.xml"> 
+	        <fileset dir="dist/WebRoot">
+	        	<exclude name="**/servlet-api.jar" />
+	    	</fileset>
+	    </war> 
+	</target>
 	<target name="classescopy">
 		<copy todir="dist/ROOT/WEB-INF">
 		    <fileset dir="WebRoot/WEB-INF">
